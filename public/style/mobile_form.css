@@ -1,0 +1,351 @@
+body {
+    background-color: #fff;
+}
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: #aaa;
+}
+
+::-moz-placeholder { /* Firefox 19+ */
+    color: #aaa;
+}
+
+:-ms-input-placeholder { /* IE 10+ */
+    color: #aaa;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+    color: #aaa;
+}
+
+.error ::-webkit-input-placeholder {
+    color: #aaa;
+}
+
+.error ::-moz-placeholder {
+    color: #aaa;
+}
+
+.error :-ms-input-placeholder {
+    color: #aaa;
+}
+
+.error :-moz-placeholder {
+    color: #aaa;
+}
+
+input[type="button"]:disabled,
+input[type="button"][class*=off] {
+    background-color: #a7aebb !important;
+}
+
+.container_main {
+    background-color: transparent;
+}
+
+    .container_main.noFoot {
+        padding-bottom: 0;
+    }
+
+/*表格*/
+.form {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 20px 6.5%;
+}
+
+    .form ul + .numInputArea {
+        margin: 20px 0;
+        width: 100%;
+    }
+
+    .form li {
+        height: initial;
+        padding: 0;
+        border-top: 0;
+        border-bottom: 1px solid #ddd;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+        .form li + li:not(.keySetting) {
+            margin-top: 20px;
+        }
+
+        .form li[class*="error"] {
+            background-color: transparent;
+            margin-bottom: 0 !important;
+        }
+
+        .form li .error_t {
+            right: 0;
+            left: 0;
+            line-height: 20px;
+            bottom: -20px;
+        }
+
+    .form .keySetting .numInputArea {
+        width: 100%;
+        margin: 20px auto 0 !important;
+    }
+
+.form_T {
+    line-height: 18px;
+    font-size: 0.95em;
+    width: 100%;
+    padding: 0;
+}
+
+.form_In {
+    width: 100%;
+    color: #000;
+}
+
+    .form_In input {
+        font-size: 0.95em;
+        height: 40px;
+        width: 100%;
+    }
+
+    .form_In.pwON input {
+        padding-right: 40px !important;
+    }
+
+    .form_In.pwON .icon_pw {
+        height: 40px;
+        width: 40px;
+        background-size: auto 25px;
+    }
+
+    .form_In.pwON.off .icon_pw {
+    }
+
+    .form_In .btn_closeKB {
+        height: 40px;
+        width: 40px;
+        background-size: auto 20px;
+    }
+
+    .form_In .icon_OK {
+        border-radius: 100%;
+        height: 20px;
+        width: 20px;
+        background: #33c200 url(https://vn.tbab953.com/Areas/Mobile/Content/images/vi-vn/btn_confirm.svg) no-repeat center;
+        background-size: auto 60%;
+        position: absolute;
+        right: 10px;
+        top: 10px;
+    }
+
+    .form_In .keyboard {
+        padding-right: 40px;
+        height: 40px;
+        line-height: 40px;
+        font-size: 0.95em;
+    }
+
+        .form_In .keyboard:not(.keyIn) {
+            color: #aaa;
+        }
+
+    .form_In .formPromot {
+        bottom: 40px;
+        right: 0;
+    }
+
+        .form_In .formPromot:before {
+            right: 11px;
+            left: auto;
+        }
+
+    .form_In .txt_prompt {
+        top: 60px;
+        right: 0;
+        left: auto;
+    }
+
+        .form_In .txt_prompt.top {
+            top: auto;
+            bottom: 40px;
+        }
+
+    .form_In .btn_select {
+        line-height: 40px;
+        font-size: 0.95em;
+        background-size: 16px auto;
+        background-position-x: calc(100% - 12px);
+        padding-right: 40px;
+        box-sizing: border-box;
+    }
+
+    .form_In select {
+        width: 100%;
+        height: 40px;
+        font-size: 0.95em;
+        background-size: 16px auto;
+        background-position-x: calc(100% - 12px);
+        padding-right: 40px;
+        -moz-transform: translateX(-3px);
+    }
+
+    .form_In .keyTxt {
+        height: 40px;
+        align-items: center;
+        display: flex;
+        width: 100%;
+        font-size: 0.95em;
+    }
+
+    .form_In.form_Left {
+        display: flex;
+        flex: 1;
+    }
+
+@-moz-document url-prefix() {
+    .form_In select {
+        background-position-x: calc(100% - 9px);
+    }
+}
+
+.form_Right {
+}
+
+    .form_Right .darkGrey {
+        background-color: #e5e5e5;
+        border: 1px solid #cacaca;
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+        .form_Right .darkGrey .t_red {
+            margin: 0 3px;
+        }
+
+    .form_Right input:active:not(:disabled),
+    .form_Right input:active:not([class*=off]),
+    .form_button input:active:not(:disabled),
+    .form_button inpu:active:not([class*=off]) {
+        opacity: .8;
+    }
+
+.form_button {
+    margin-top: 20px;
+    padding: 0;
+}
+
+    .form_button.marginTop {
+        margin-top: 30px;
+    }
+
+    .form_button input,
+    .form_button div {
+        border-radius: 10px;
+        font-size: 0.95em;
+        height: 50px;
+    }
+
+    .form_button div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        line-height: 1em;
+    }
+
+        .form_button div .t_yellow {
+            margin-left: 5px;
+        }
+
+        .form_button div.off {
+            background-color: #a7aebb;
+            color: #fff;
+        }
+
+.numInputArea.on + .form_button.marginTop {
+    margin-top: 20px;
+}
+
+.term {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-top: 20px;
+}
+
+    .term + .term {
+        margin-top: 15px;
+    }
+
+    .term .btn_confirm {
+        border-radius: 100%;
+        cursor: pointer;
+        width: 20px;
+        height: 20px;
+        border: 1px solid #aaa;
+        box-sizing: border-box;
+        background-color: #fff;
+    }
+
+        .term .btn_confirm.on {
+            border: 0;
+            background: #1589ff url(https://vn.tbab953.com/Areas/Mobile/Content/images/vi-vn/btn_confirm.svg) no-repeat center;
+            background-size: auto 60%;
+        }
+
+    .term .termText {
+        font-size: 0.95em;
+        color: #555;
+        margin-left: 10px;
+        width: calc(100% - 30px);
+        line-height: 1.35em;
+    }
+
+.bankCardHint {
+    color: #f00;
+    text-align: center;
+    font-size: 0.8em;
+    height: auto;
+    border: 0 !important;
+    justify-content: center !important;
+    margin-top: 20px;
+}
+
+@media (min-width: 400px) {
+    .form {
+        padding: 25px 6.5%;
+    }
+
+    .form_T {
+        line-height: 1.35em;
+    }
+
+    .form_Right .darkGrey .t_red {
+        margin: 0 5px;
+    }
+
+    .term .btn_confirm {
+        margin-top: 2px;
+    }
+
+    .term .termText {
+        margin-left: 15px;
+        width: calc(100% - 35px);
+    }
+}
+
+@media (min-width:414px) {
+    .bankCardHint {
+        letter-spacing: -0.5px;
+    }
+}
+
+@media (min-width: 530px) {
+    .bankCardHint {
+        letter-spacing: 0;
+    }
+}

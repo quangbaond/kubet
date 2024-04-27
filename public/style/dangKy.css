@@ -1,0 +1,61 @@
+@charset "UTF-8";
+
+[ng\:cloak],
+[ng-cloak],
+[data-ng-cloak],
+[x-ng-cloak],
+.ng-cloak,
+.x-ng-cloak,
+.ng-hide:not(.ng-hide-animate) {
+    display: none !important;
+}
+
+ng\:form {
+    display: block;
+}
+
+.ng-animate-shim {
+    visibility: hidden;
+}
+
+.ng-anchor {
+    position: absolute;
+}
+
+.slidercaptcha {
+    margin: 0 auto;
+    width: 314px;
+    height: 286px;
+    border-radius: 4px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.125);
+}
+
+.slidercaptcha .card-body {
+    padding: 1rem;
+}
+
+.slidercaptcha canvas:first-child {
+    border-radius: 4px;
+    border: 1px solid #e6e8eb;
+}
+
+.slidercaptcha.card .card-header {
+    background-image: none;
+    background-color: rgba(0, 0, 0, 0.03);
+}
+
+.refreshIcon {
+    top: -54px;
+}
+.mask_new .popup{
+    max-width: fit-content;
+}
+#notyMess{
+    max-width: none;
+}
+.mask_new .popupCenter{
+    padding: 0;
+}
+.mask_new .popup_In{
+    padding: 0;
+}

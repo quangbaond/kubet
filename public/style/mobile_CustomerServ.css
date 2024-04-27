@@ -1,0 +1,799 @@
+body, html {
+    height: 100%;
+}
+
+.service {
+    position: relative;
+    padding-top: 154px;
+}
+
+    .service > div {
+        position: relative;
+        z-index: 1;
+    }
+
+    .service:before {
+        content: "";
+        width: 100%;
+        height: 100%;
+        background: url(../Areas/Mobile/Content/images/vi-vn/img_Serv_bg.png) no-repeat top;
+        background-size: 100% auto;
+        position: fixed;
+        top: 45px;
+    }
+
+    .service:after {
+        content: "";
+        width: 100%;
+        max-width: 768px;
+        height: 100%;
+        background: url(../Areas/Mobile/Content/images/vi-vn/img_Serv_girl.png) no-repeat top;
+        background-size: 100% auto;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
+
+.service_list {
+    background-color: #fff;
+    display: table;
+    width: 90%;
+    height: 50px;
+    margin: auto;
+    margin-bottom: 13px;
+    cursor: pointer;
+    padding: 0 3%;
+    box-sizing: border-box;
+    position: relative;
+    border-radius: 10px;
+    box-shadow: 0px 3px 7px rgba(0,0,0,0.03);
+}
+
+    .service_list.off {
+        cursor: none;
+    }
+
+        .service_list.off .serMaintain {
+            display: block;
+        }
+
+        .service_list.off img {
+            opacity: 0.3;
+        }
+
+        .service_list.off h3 {
+            color: #ccc;
+        }
+
+        .service_list.off .btn_ServID {
+            display: none;
+        }
+
+    .service_list:not(.off):active {
+        background-color: #f2f2f2;
+    }
+
+.serMaintain {
+    background: url(../Areas/Mobile/Content/images/vi-vn/icon_maintain.svg) no-repeat top;
+    background-size: auto 50%;
+    color: #ff7575;
+    font-size: 0.95em;
+    padding-top: 20px;
+    box-sizing: border-box;
+    text-align: center;
+    font-weight: normal;
+    display: none;
+}
+
+.serMaintain_in {
+    position: absolute;
+    bottom: 0;
+    left: 5%;
+    right: 5%;
+    display: none;
+    z-index: 1;
+}
+
+.serMaintain_text {
+    position: absolute;
+    box-sizing: border-box;
+    background-color: #ff9900;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 3px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+    font-size: 0.75rem;
+    line-height: 1.3em;
+    text-align: left;
+    font-weight: normal;
+    max-width: 75%;
+}
+
+    .serMaintain_text:before {
+        content: '';
+        position: absolute;
+        top: -8px;
+        left: 10px;
+        border-style: solid;
+        border-width: 0 0 9px 9px;
+        border-color: transparent transparent #ff9900 transparent;
+    }
+
+.service_InL {
+    display: table-cell;
+    position: relative;
+    width: 12%;
+    overflow: hidden;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.service_InC {
+    display: table-cell;
+    vertical-align: middle;
+    padding-right: 2%;
+    padding-left: 4%;
+}
+
+.service_InR {
+    display: table-cell;
+    width: 20%;
+    color: #6f6f6f;
+    font-size: 0.75em;
+    text-align: center;
+    vertical-align: middle;
+    font-weight: bold;
+}
+
+.Serv_img {
+    line-height: 0;
+}
+
+    .Serv_img img {
+        width: 24px;
+        height: 24px;
+    }
+
+    .Serv_img .img_viber {
+        width: 32px;
+        height: 32px;
+    }
+
+.service_InC h3 {
+    color: #000;
+    margin: 0;
+    padding: 0;
+    font-size: 0.95em;
+    word-break: break-all;
+    font-weight: normal;
+}
+
+.Serv_t {
+    font-size: 0.8em;
+    color: #999;
+    line-height: 1.2em;
+}
+
+.service_Mail {
+    letter-spacing: -0.5px;
+}
+
+.btn_ServID {
+    border-radius: 2px;
+    color: #2782d7;
+    padding: 4px 0 5px;
+    line-height: 1.2em;
+    margin: 0 auto;
+    max-width: 90px;
+    width: 100%;
+    white-space: nowrap;
+    box-sizing: border-box;
+}
+
+    .btn_ServID.bg_colorDB {
+        color: #fff;
+    }
+
+        .btn_ServID.bg_colorDB:active {
+            opacity: .8;
+        }
+
+@media (min-width: 360px) {
+    .service {
+        padding-top: 173px;
+    }
+
+    .serMaintain_text {
+        font-size: 0.82rem;
+    }
+}
+
+@media (min-width: 375px) {
+    .Serv_img img {
+        width: 28px;
+        height: 28px;
+    }
+
+    .Serv_img .img_viber {
+        width: 36px;
+        height: 36px;
+    }
+}
+
+@media (min-width: 400px) {
+    .service_list {
+        height: 70px;
+        margin-bottom: 17px;
+    }
+
+    .serMaintain {
+        background-size: auto 55%;
+        padding-top: 25px;
+    }
+
+    .serMaintain_text {
+        font-size: 0.9rem;
+    }
+
+    .btn_ServID {
+        padding: 6px 0 7px;
+    }
+
+    .service {
+        padding-top: 199px;
+    }
+
+        .service:before {
+            top: 55px;
+        }
+}
+
+@media (min-width: 534px) {
+    .service {
+        padding-top: 230px;
+    }
+
+        .service:after {
+            background-size: 90% auto;
+        }
+
+    .service_Mail {
+        letter-spacing: normal;
+    }
+
+    .service_InL {
+        width: 20%;
+    }
+
+    .serMaintain_in {
+        left: 10%;
+        right: 10%;
+    }
+}
+
+@media (min-width: 600px) {
+    .service {
+        padding-top: 236px;
+    }
+
+    .Serv_img img {
+        width: 36px;
+        height: 36px;
+    }
+
+    .service:after {
+        background-size: 80% auto;
+    }
+}
+
+@media (min-width: 768px) {
+    .service_InC {
+        padding-right: 0;
+    }
+}
+
+/*立即聯繫按鈕*/
+.service_Link {
+    width: 152px;
+    color: #fff;
+    font-size: 1.1em;
+    text-align: center;
+    border-radius: 99px;
+    background-color: rgba(12,74,191,0.7);
+    margin: auto;
+    display: table;
+    cursor: pointer;
+    line-height: 42px;
+    margin-bottom: 20px;
+    z-index: 1;
+    position: relative;
+}
+
+    .service_Link.off {
+        background-color: #aaa;
+    }
+
+    .service_Link:not(.off):active {
+        background-color: rgba(15,94,242,0.7);
+    }
+
+    .service_Link .serMaintain_in {
+        left: -30px;
+        right: -30px;
+        bottom: -5px;
+    }
+
+    .service_Link .serMaintain_text {
+        word-break: break-all;
+        max-width: initial;
+        display: table;
+        margin: auto;
+        position: relative;
+        transform: translateY(100%);
+        -webkit-transform: translateY(100%);
+    }
+
+        .service_Link .serMaintain_text:before {
+            left: calc(50% - 9px);
+        }
+
+@media (min-width: 360px) {
+    .service_Link {
+        width: 171px;
+        line-height: 47px;
+    }
+}
+
+@media (min-width: 375px) {
+    .service_Link {
+        width: 178px;
+        line-height: 49px;
+    }
+}
+
+@media (min-width: 400px) {
+    .service_Link {
+        width: 197px;
+        line-height: 54px;
+    }
+}
+
+@media (min-width: 534px) {
+    .service_Link {
+        width: 236px;
+        line-height: 66px;
+    }
+}
+
+@media (min-width: 600px) {
+    .service_Link {
+        width: 248px;
+        line-height: 70px;
+    }
+}
+
+/*新手教学*/
+.customer_main {
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    position: fixed;
+    padding-bottom: 0 !important;
+}
+
+.btnIOS:before {
+    background: url(../Areas/Mobile/Content/Images/vi-vn/icon_IOS.svg) no-repeat center;
+    background-size: 100% auto;
+}
+
+.btnIOS.on:before {
+    background: url(../Areas/Mobile/Content/Images/vi-vn/icon_IOSW.svg) no-repeat center;
+    background-size: 100% auto;
+}
+
+.btnAN:before {
+    background-image: url(../Areas/Mobile/Content/Images/vi-vn/icon_android.svg);
+    background-size: 100% auto;
+}
+
+.btnAN.on:before {
+    background-image: url(../Areas/Mobile/Content/Images/vi-vn/icon_androidW.svg);
+    background-size: 100% auto;
+}
+
+.customer_main .swiper {
+    text-align: center;
+    height: calc(100% - 85px);
+}
+
+.customer_main .swiper-wrapper {
+    height: calc(100% - 37px);
+}
+
+.customer_main .swiper-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+    .customer_main .swiper-slide img {
+        height: 95%;
+        max-width: calc(100% - 80px);
+    }
+
+.customer_main .swiper-button-prev,
+.customer_main .swiper-button-next {
+    --swiper-navigation-color: #b6b6b6; /* 设置按钮颜色 */
+    --swiper-navigation-size: 30px; /* 设置按钮大小 */
+    outline: none;
+}
+
+    .customer_main .swiper-button-prev:active,
+    .customer_main .swiper-button-next:active {
+        --swiper-navigation-color: #666; /* 设置按钮颜色 */
+    }
+
+.pageBox {
+    display: flex;
+    margin-top: 7px;
+    margin-bottom: -5px;
+    position: relative;
+    padding: 0 10%;
+    box-sizing: border-box;
+    bottom: 0 !important;
+}
+
+    .pageBox:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 0;
+        margin: auto;
+        background-color: #52a9f8;
+        width: 100%;
+        height: 1px;
+        z-index: -1;
+    }
+
+.btnPage {
+    text-decoration: none;
+    flex: 1;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 35px;
+    padding-right: 1px;
+    padding-top: 1px;
+    box-sizing: border-box;
+}
+
+    .btnPage:first-child {
+        padding-right: 2px;
+    }
+
+    .btnPage:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 0;
+        margin: auto;
+        background: #52a9f8 url(../Areas/Mobile/Content/Images/vi-vn/btn_numberAll.svg) no-repeat top left;
+        background-size: auto 200%;
+        width: 29px;
+        height: 29px;
+        border-radius: 50%;
+        border: 1px solid #52a9f8;
+        z-index: -1;
+        box-sizing: border-box;
+    }
+
+    .btnPage:nth-child(2):after {
+        background-position-x: 25%;
+    }
+
+    .btnPage:nth-child(3):after {
+        background-position-x: 50%;
+    }
+
+    .btnPage:nth-child(4):after {
+        background-position-x: 75%;
+    }
+
+    .btnPage:nth-child(5):after {
+        background-position-x: 100%;
+    }
+
+    .btnPage.on ~ .btnPage:after {
+        background-color: #fff;
+        background-position-y: bottom;
+    }
+
+.btnBox {
+    width: 62.5vw;
+    min-width: 200px;
+    margin: 0 auto 15px;
+    font-size: 0.85em;
+    border-radius: 100px;
+    height: 30px;
+    background-color: #fff;
+    display: flex;
+}
+
+    .btnBox a {
+        flex: 1;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        color: #000;
+    }
+
+        .btnBox a:before {
+            content: '';
+            display: flex;
+            height: 22px;
+            width: 22px;
+            margin-right: 5px;
+        }
+
+    .btnBox .on {
+        color: #fff;
+        border-radius: 100px;
+        background-color: #52a9f8;
+    }
+
+@supports (-webkit-overflow-scrolling: touch) {
+    @media (min-width:0px) {
+        /* CSS specific to iOS devices */
+        .btnBox {
+            box-shadow: 0 2px 6px rgb(0,0,0,0.2);
+        }
+    }
+}
+
+@supports not (-webkit-overflow-scrolling: touch) {
+    /* CSS for other than iOS devices */
+    .btnBox {
+        -webkit-filter: drop-shadow(0 2px 3px rgba(0,0,0,.2));
+        filter: drop-shadow(0 2px 3px rgba(0,0,0,.2));
+    }
+}
+
+.imgBig {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.46);
+    z-index: 999;
+}
+
+    .imgBig.on {
+        display: flex;
+    }
+
+    .imgBig img {
+        height: 85%;
+        max-width: 85%;
+        position: relative;
+    }
+
+.btn_closeBig {
+    position: absolute;
+    bottom: calc(92.5% - 13px);
+    left: calc(50% + 20vh);
+    width: 26px;
+    height: 26px;
+    background: url(../Areas/Mobile/Content/images/vi-vn/btn_closeW.svg) no-repeat center;
+    background-size: 100% auto;
+    cursor: pointer;
+}
+
+@supports (-webkit-overflow-scrolling: touch) {
+    @media (min-width:0px) {
+        /* CSS specific to iOS devices */
+        .btn_closeBig {
+            left: calc(50% + 19.5vh);
+        }
+    }
+}
+
+@media (min-width: 350px) {
+    .customer_main .swiper {
+        height: calc(100% - 95px);
+    }
+
+    .customer_main .swiper-wrapper {
+        height: calc(100% - 47px);
+    }
+
+    .pageBox {
+        margin-top: 10px;
+        margin-bottom: -8px;
+    }
+
+    .btnPage {
+        height: 45px;
+    }
+
+        .btnPage:after {
+            width: 31px;
+            height: 31px;
+        }
+
+    .btnBox {
+        height: 35px;
+        margin-bottom: 20px;
+    }
+
+        .btnBox a:before {
+            height: 30px;
+            width: 30px;
+        }
+
+    .btn_closeBig {
+        width: 30px;
+        height: 30px;
+        bottom: calc(92.5% - 13px);
+    }
+}
+
+@media (min-width: 400px) {
+    .customer_main .swiper {
+        height: calc(100% - 100px);
+    }
+
+    .customer_main .swiper-wrapper {
+        height: calc(100% - 57px);
+    }
+
+    .pageBox {
+        margin-top: 11px;
+        margin-bottom: -9px;
+    }
+
+    .btnPage {
+        height: 55px;
+    }
+
+        .btnPage:after {
+            width: 35px;
+            height: 35px;
+        }
+
+    .btnBox {
+        margin-bottom: 25px;
+    }
+
+    .btn_closeBig {
+        width: 32px;
+        height: 32px;
+        bottom: calc(92.5% - 16px);
+    }
+}
+
+@media (min-width: 530px) {
+    .customer_main .swiper-slide img {
+        max-width: calc(100% - 100px);
+    }
+
+    .customer_main .swiper-button-prev {
+        left: 20px;
+    }
+
+    .customer_main .swiper-button-next {
+        right: 20px;
+    }
+
+    .btnBox {
+        width: 50vw;
+    }
+}
+
+@media (min-width: 768px) {
+    .customer_main .swiper {
+        height: calc(100% - 115px);
+        --swiper-navigation-size: 35px; /* 设置按钮大小 */
+    }
+
+    .customer_main .swiper-wrapper {
+        height: calc(100% - 67px);
+    }
+
+    .btnBox {
+        height: 40px;
+        margin-bottom: 35px;
+    }
+
+    @supports (-webkit-overflow-scrolling: touch) {
+        /*CSS specific to iOS devices*/
+        .btn_closeBig {
+            left: calc(50% + 21vh);
+        }
+    }
+}
+
+@media (min-aspect-ratio: 75/100) {
+    .customer_main .swiper-slide img {
+        height: 90%;
+    }
+}
+
+@media (max-aspect-ratio: 486/1000) {
+    .customer_main .swiper-slide img {
+        height: auto;
+    }
+
+    .imgBig img {
+        height: auto;
+    }
+
+    .btn_closeBig {
+        left: calc(92.5% - 15px);
+        bottom: calc(50% + 83vw - 15px);
+    }
+}
+
+@media (orientation: landscape) {
+    .customer_main .swiper {
+        height: calc(100% - 85px);
+    }
+
+    .customer_main .swiper-slide img {
+        height: calc(100% - 20px);
+    }
+
+    .btnBox {
+        height: 30px;
+        margin-bottom: 15px;
+        width: 40vw;
+    }
+
+        .btnBox a:before {
+            height: 22px;
+            width: 22px;
+        }
+
+    .btn_closeBig {
+        width: 26px;
+        height: 26px;
+        bottom: calc(92.5% - 13px);
+    }
+}
+
+@media (min-height: 530px) and (orientation: landscape) {
+    .customer_main .swiper {
+        height: calc(100% - 100px);
+    }
+
+    .customer_main .swiper-slide img {
+        height: calc(100% - 40px);
+    }
+
+    .btnBox {
+        height: 35px;
+        margin-bottom: 25px;
+    }
+
+        .btnBox a:before {
+            height: 30px;
+            width: 30px;
+        }
+
+    .btn_closeBig {
+        width: 30px;
+        height: 30px;
+        bottom: calc(92.5% - 15px);
+    }
+}

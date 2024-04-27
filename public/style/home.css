@@ -1,0 +1,21 @@
+
+.transMsg {
+    margin-top: 15%;
+    height: 100%;
+}
+
+.transMsg img {
+    margin: 0 auto;
+    width: 20%;
+    display: block;
+}
+
+.transMsg span {
+    display: table;
+    text-align: center;
+    margin-top: 30px;
+    width: 100%;
+    vertical-align: middle;
+    font-size: 20px;
+    line-height: 30px;
+}

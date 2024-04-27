@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 26.0.3, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="50px" height="50px" viewBox="0 0 50 50" style="enable-background:new 0 0 50 50;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:url(#SVGID_1_);}
+	.st1{opacity:0.5;fill:url(#SVGID_00000167389244738457094700000005731103466638232733_);enable-background:new    ;}
+	.st2{fill:url(#SVGID_00000138574013599123562050000009149072407996041642_);}
+</style>
+<g>
+	<g>
+		
+			<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="36.8574" y1="818.25" x2="-69.0027" y2="818.25" gradientTransform="matrix(1 0 0 1 0 -792)">
+			<stop  offset="0" style="stop-color:#CD0000"/>
+			<stop  offset="1" style="stop-color:#FF2A33"/>
+		</linearGradient>
+		<polygon class="st0" points="45.6,26.3 25.6,50 0,50 20,26.3 0,2.5 25.6,2.5 		"/>
+		
+			<linearGradient id="SVGID_00000170994925228065259380000009179834475478317184_" gradientUnits="userSpaceOnUse" x1="5.7668" y1="818.15" x2="42.8276" y2="818.15" gradientTransform="matrix(1 0 0 1 0 -792)">
+			<stop  offset="0" style="stop-color:#CD0000"/>
+			<stop  offset="1" style="stop-color:#FF2A33"/>
+		</linearGradient>
+		
+			<polygon style="opacity:0.5;fill:url(#SVGID_00000170994925228065259380000009179834475478317184_);enable-background:new    ;" points="
+			50,26.3 37.3,41.3 18.3,41.3 31.1,26.3 18.3,11 37.3,11 		"/>
+		
+			<linearGradient id="SVGID_00000023246010084380782870000011033168687519066297_" gradientUnits="userSpaceOnUse" x1="-10.5659" y1="818.25" x2="33.4812" y2="818.25" gradientTransform="matrix(1 0 0 1 0 -792)">
+			<stop  offset="0" style="stop-color:#CD0000"/>
+			<stop  offset="1" style="stop-color:#FF2A33"/>
+		</linearGradient>
+		<polygon style="fill:url(#SVGID_00000023246010084380782870000011033168687519066297_);" points="42,26.3 26.7,44.5 16.8,44.5 
+			32.1,26.3 16.8,8 26.7,8 		"/>
+	</g>
+</g>
+</svg>

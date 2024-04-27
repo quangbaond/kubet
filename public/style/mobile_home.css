@@ -1,0 +1,1906 @@
+body, html, .container_main {
+    height: 100%;
+    background-color: #fff;
+}
+
+body {
+    overflow: hidden;
+    overscroll-behavior-y: contain;
+}
+
+.bg_header {
+    background: #fff;
+    color: #000;
+}
+
+.icon_inforMoney {
+    color: #535867;
+}
+
+.icon_inforMoney:after {
+    background-image: url(../Areas/Mobile/Content/images/vi-vn/icon_arrowGray.svg);
+}
+
+.container_main {
+    padding-right: 2%;
+    padding-left: 2%;
+    padding-top: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    position: fixed;
+}
+
+/*swiper2*/
+.swiper2 {
+    height: 38.5vw;
+}
+
+.swiper2 img {
+    width: 100%;
+}
+
+.swiper2 .swiper-slide:before,
+.swiper2 .swiper-slide:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 30%;
+    left: 0;
+    right: 0;
+    pointer-events: none;
+}
+
+.swiper2 .swiper-slide:before {
+    top: -1px;
+    background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 50%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 50%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 50%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=0 ); /* IE6-9 */
+}
+
+.swiper2 .swiper-slide:after {
+    bottom: -1px;
+    background: -moz-linear-gradient(top, rgba(255,255,255,0) 50%, rgba(255,255,255,1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(255,255,255,0) 50%,rgba(255,255,255,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(255,255,255,0) 50%,rgba(255,255,255,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
+}
+
+.swiper-pagination-bullet {
+    width: 6px;
+    height: 6px;
+    opacity: 0.5;
+    background-color: #cbdeed;
+    margin: 0 3px !important;
+    pointer-events: auto;
+}
+
+.swiper-pagination-bullet-active {
+    opacity: 1;
+    outline: none;
+}
+
+.swiper-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal,
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
+    bottom: 0;
+    pointer-events: none;
+}
+
+@media (min-width: 768px) {
+    .swiper-pagination-bullet {
+        width: 10px;
+        height: 10px;
+        margin: 0 5px !important;
+    }
+
+    .swiper-horizontal > .swiper-pagination-bullets,
+    .swiper-pagination-bullets.swiper-pagination-horizontal,
+    .swiper-pagination-custom, .swiper-pagination-fraction {
+        bottom: 3px;
+    }
+}
+
+/*遊戲列表*/
+.GameList {
+    display: flex;
+    width: 100%;
+    height: calc(100% - 38.5vw);
+    padding-top: 6px;
+    box-sizing: border-box;
+}
+
+[class*="btn_GL"] {
+    margin-bottom: 6px;
+    box-sizing: border-box;
+    background-color: #e7f1fb;
+}
+
+[class*="btn_GL"]:last-child,
+.GameList_R > [class*="btn_GL"]:not(.w100):nth-last-child(2) {
+    margin-bottom: 12px;
+}
+
+/*遊戲列表(左)*/
+.GameList_L {
+    display: flex;
+    flex-wrap: wrap;
+    overflow: auto;
+    padding-right: 2%;
+    flex: 18%;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.GameList_L::-webkit-scrollbar {
+    display: none;
+}
+
+.GameList_L [class*="btn_GL"] {
+    width: 100%;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    outline: none;
+    padding: 1px;
+    height: calc((100% - 54px)/8);
+    min-height: 26px;
+}
+
+.GameList_L [class*="btn_GL"].on {
+    border: 1px solid #3281d0;
+    padding: 0;
+}
+
+.GameList_L h2 {
+    margin: 0.2vh 0 0;
+    font-size: 11px;
+    text-align: center;
+    color: #535867;
+    line-height: 1em;
+}
+
+.GameList_L [class*="ic_GL"] {
+    min-width: 18px;
+    min-height: 18px;
+    width: 3vh;
+    height: 3vh;
+}
+
+.btn_GLhot h2 {
+    font-size: 0.8em !important;
+}
+
+.ic_GLhot {
+    background: url(../Areas/Mobile/Content/images/vi-vn/icon_hot.svg) no-repeat center;
+    background-size: 100% auto !important;
+}
+
+.ic_GLsport {
+    background: url(../Areas/Mobile/Content/images/vi-vn/icon_sport.svg) no-repeat center;
+    background-size: 75% auto;
+}
+
+.ic_GLlive {
+    background: url(../Areas/Mobile/Content/images/vi-vn/icon_live.svg) no-repeat center;
+    background-size: 75% auto;
+}
+
+.ic_GLloto {
+    background: url(../Areas/Mobile/Content/images/vi-vn/icon_loto.svg) no-repeat center;
+    background-size: 75% auto;
+}
+
+.ic_GLslot {
+    background: url(../Areas/Mobile/Content/images/vi-vn/icon_slot.svg) no-repeat center;
+    background-size: 75% auto;
+}
+
+.ic_GLfish {
+    background: url(../Areas/Mobile/Content/images/vi-vn/icon_fish.svg) no-repeat center;
+    background-size: 80% auto;
+}
+
+.ic_GLchess {
+    background: url(../Areas/Mobile/Content/images/vi-vn/icon_chess.svg) no-repeat center;
+    background-size: 75% auto;
+}
+
+.ic_GLesport {
+    background: url(../Areas/Mobile/Content/images/vi-vn/icon_esport.svg) no-repeat center;
+    background-size: 85% auto;
+}
+
+/*遊戲列表(右)*/
+.GameList_RBox {
+    flex: 82%;
+    margin-right: -2%;
+    padding-right: 2%;
+}
+
+.GameList_R {
+    opacity: 0;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: auto;
+    justify-content: space-between;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.GameList_R::-webkit-scrollbar {
+    display: none;
+}
+
+.GameList_R.on {
+    display: flex;
+}
+
+.GameList_R [class*="btn_GL"] {
+    border-radius: 10px;
+    position: relative;
+    background-position: center top;
+    background-repeat: no-repeat;
+    min-height: 75px;
+}
+
+.GameList_R [class*="btn_GL"]:not(.maintain):active {
+    background: #ebf5fe;
+}
+
+.GameList_R [class*="btn_GL"]:not(.w100) {
+    width: calc(50% - 3px);
+}
+
+.GameList_R [class*="btn_GL"]:not(.w100) h1 span {
+    line-height: 1em;
+}
+
+.GameList_R:not([class*="wholeT"]) [class*="btn_GL"] {
+    height: calc(25% - 8px);
+}
+
+.GameList_R:not([class*="wholeT"]) .img_GL:after {
+    width: 22.5vh;
+    height: 15.5vh;
+    min-width: 128px;
+    min-height: 89px;
+}
+
+.GameList_R .img_GL {
+    position: absolute;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    right: 0;
+    bottom: 0;
+    border-radius: 10px;
+}
+
+.GameList_R .img_GL:after {
+    content: '';
+    background-position: 1em -1px;
+    background-repeat: no-repeat;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+}
+
+.GameList_R [class*="btn_GLhot"]:not(.btn_GLhotCool) {
+    height: calc(36% - 8px);
+    min-height: 111px;
+}
+
+.GameList_R [class*="btn_GLhot"] .img_GL:after {
+    background-image: url(../Areas/Mobile/Content/images/vi-vn/img_hotOT.png);
+    background-size: 100% auto;
+}
+
+.GameList_R [class*="btn_GLloto"] {
+    background-image: url(../Areas/Mobile/Content/images/vi-vn/img_lotoBG.png);
+    background-size: cover;
+}
+
+.GameList_R [class*="btn_GLloto"] .img_GL:after {
+    background-image: url(../Areas/Mobile/Content/images/vi-vn/img_lotoOT.png);
+    background-size: 100% auto;
+}
+
+.GameList_R [class*="btn_GLfish"] {
+    background-image: url(../Areas/Mobile/Content/images/vi-vn/img_fishBG.png);
+    background-size: cover;
+}
+
+.GameList_R [class*="btn_GLfish"] .img_GL:after {
+    background-image: url(../Areas/Mobile/Content/images/vi-vn/img_fishOT.png);
+    background-size: 100% auto;
+}
+
+.GameList_R [class*="btn_GLchess"] {
+    background-image: url(../Areas/Mobile/Content/images/vi-vn/img_chessBG.png);
+    background-size: cover;
+}
+
+.GameList_R [class*="btn_GLchess"] .img_GL:after {
+    background-image: url(../Areas/Mobile/Content/images/vi-vn/img_chessOT.png);
+    background-size: 100% auto;
+}
+
+.GameList_R [class*="btn_GLesport"] {
+    background-image: url(../Areas/Mobile/Content/images/vi-vn/img_esportsBG.png);
+    background-size: cover;
+}
+
+.GameList_R [class*="btn_GLesport"] .img_GL:after {
+    background-image: url(../Areas/Mobile/Content/images/vi-vn/img_esportsOT.png);
+    background-size: 100% auto;
+}
+
+.GameList_R [class*="btn_GLlive"] {
+    background-image: url(../Areas/Mobile/Content/images/vi-vn/img_liveBG.png);
+    background-size: cover;
+}
+
+.GameList_R [class*="btn_GLlive"] .img_GL:after {
+    background-image: url(../Areas/Mobile/Content/images/vi-vn/img_liveOT.png);
+    background-size: 100% auto;
+}
+
+.GameList_R [class*="btn_GLsport"] {
+    background-image: url(../Areas/Mobile/Content/images/vi-vn/img_sportBG.png);
+    background-size: cover;
+}
+
+.GameList_R [class*="btn_GLsport"] .img_GL:after {
+    background-image: url(../Areas/Mobile/Content/images/vi-vn/img_sportOT.png);
+    background-size: 100% auto;
+}
+
+.GameList_R [class*="btn_GLslot"] {
+    background-image: url(../Areas/Mobile/Content/images/vi-vn/img_slotBG.png);
+    background-size: cover;
+}
+
+.GameList_R [class*="btn_GLslot"] .img_GL:after {
+    background-image: url(../Areas/Mobile/Content/images/vi-vn/img_slotOT.png);
+    background-size: 100% auto;
+}
+
+.GameList_R .w100 {
+    width: 100% !important;
+    display: flex;
+    align-items: center;
+}
+
+.GameList_R .w100 .img_GL:after {
+    background-position-x: right;
+}
+
+.GameList_R:not([class*="wholeT"]) .w100 .img_GL {
+    right: 10vw;
+}
+
+.GameList_R[class*="wholeT"] .img_GL:after {
+    width: 55.7vw;
+    height: 100%;
+    max-height: 54vw;
+}
+
+.GameList_R [class*="btn_GL"]:not([class*="btn_GLhot"]) .t_GL {
+    width: 55px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-left: 6px;
+    margin-right: 6px;
+}
+
+.GameList_R .w100 .t_GL {
+    width: 47% !important;
+    margin: 10px 0 0 0 !important;
+}
+
+.GameList_R .w100 .t_GL img {
+    margin-top: -6px;
+}
+
+.GameList_R .w100 h1 {
+    font-size: 1em;
+}
+
+.GameList_R .w100 h1 span {
+    margin-bottom: -5px;
+}
+
+.btn_AD ~ .container_main .GameList_R [class*="btn_GLhot"] .img_GL:after {
+    width: 21vh;
+    height: 14vh;
+}
+/*only for IOS*/
+@supports (-webkit-overflow-scrolling: touch) {
+    .GameList_R [class*="btn_GLhot"] .img_GL:after {
+        width: 21vh;
+        height: 14vh;
+    }
+
+    .btn_AD ~ .container_main .GameList_R [class*="btn_GLhot"] .img_GL:after {
+        width: 19vh;
+        height: 12vh;
+    }
+}
+
+/*swiper1*/
+.swiper1 .swiper-wrapper {
+    height: auto !important;
+}
+
+.swiper-slide-active {
+    opacity: 1;
+}
+
+.swiper-pagination-vertical.swiper-pagination-bullets {
+    transform: initial;
+}
+
+.t_GL {
+    margin: 10px;
+}
+
+.t_GL h1 {
+    font-size: 0.85em;
+    color: #535867;
+    line-height: 1em;
+    margin: 0;
+    position: relative;
+    z-index: 1;
+}
+
+.t_GL h1 span {
+    font-size: 0.7em;
+    display: block;
+}
+
+.t_GL img {
+    height: 47px;
+    width: auto;
+    margin-top: -8px;
+    display: block;
+    position: relative;
+    z-index: 1;
+}
+
+.btn_GLlotoKU:not(:active) {
+    background-image: url(../Areas/Mobile/Content/images/vi-vn/img_lotoKUBG.png) !important;
+    background-size: 100% 100% !important;
+}
+
+.btn_GLlotoKU .img_GL:after {
+    background-position-x: 1em !important;
+}
+
+.btn_GLliveKU:not(:active) {
+    background-image: url(../Areas/Mobile/Content/images/vi-vn/img_liveKUBG.png) !important;
+}
+
+.logo_CAO {
+    display: flex;
+    width: calc(40px + 0.5vw);
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn_GLhotSlot img,
+.btn_GLhotLoto img,
+.btn_GLhotLive img,
+.logo_CAO img {
+    height: 40px;
+}
+
+.logo_CAO img:nth-last-child(3) {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.logo_CAO img + img {
+    width: auto;
+    height: 25px;
+    margin-top: -2vw;
+}
+
+.btn_GLsportKU:not(.w100) .logo_CAO {
+    -webkit-transform: scale(0.8,0.8) translateY(-10%);
+    transform: scale(0.8,0.8) translateY(-10%);
+}
+
+.btn_GLsportKU.w100 .logo_CAO {
+    flex-wrap: nowrap;
+    width: auto !important;
+    max-width: initial;
+}
+
+.btn_GLsportKU.w100 .logo_CAO img + img {
+    margin-left: 1.5vw;
+}
+
+.btn_GLhotSport {
+    background-image: url(../Areas/Mobile/Content/images/vi-vn/img_sportHotBG.png);
+    background-size: cover;
+}
+
+.btn_GLhotSlot img,
+.btn_GLhotLoto img,
+.btn_GLhotLive img,
+.btn_GLhotSport img {
+    margin-top: -6px;
+}
+
+.btn_GLhotLive {
+    background-image: url(../Areas/Mobile/Content/images/vi-vn/img_liveHotBG.png);
+    background-size: cover;
+}
+
+.btn_GLhotLive .img_GL:after {
+    background-image: url(../Areas/Mobile/Content/images/vi-vn/img_hotLive.png) !important;
+}
+
+.btn_GLhotLoto .img_GL:after,
+.btn_GLhotLive .img_GL:after {
+    max-height: initial !important;
+    height: 100% !important;
+    background-position-y: bottom !important;
+}
+
+.btn_GLhotLoto {
+    background-image: url(../Areas/Mobile/Content/images/vi-vn/img_lotoHotBG.png);
+    background-size: cover;
+}
+
+.btn_GLhotLoto .img_GL:after {
+    background-image: url(../Areas/Mobile/Content/images/vi-vn/img_hotLoto.png) !important;
+}
+
+.btn_GLhotSlot {
+    background-image: url(../Areas/Mobile/Content/images/vi-vn/img_slotHotBG.png);
+    background-size: cover;
+}
+
+.btn_GLhotSlot .img_GL:after {
+    bottom: 10%;
+}
+
+.btn_GLhotCAO,
+.btn_GLhotStudio {
+    background: #daddfe;
+    background: -moz-linear-gradient(-45deg, #e3ebff 0%, #daddfe 50%, #ccbef7 100%);
+    background: -webkit-linear-gradient(-45deg, #e3ebff 0%,#daddfe 50%,#ccbef7 100%);
+    background: linear-gradient(135deg, #e3ebff 0%,#daddfe 50%,#ccbef7 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e3ebff', endColorstr='#ccbef7',GradientType=1 );
+}
+
+.btn_GLhotCAO:not(.maintain):active,
+.btn_GLhotStudio:not(.maintain):active,
+.btn_GLhotCool:not(.maintain):active {
+    background: #e3ebff !important;
+}
+
+.btn_GLhotCAO .t_GL,
+.btn_GLhotStudio .t_GL {
+    display: flex;
+    align-items: center;
+    margin-top: 0 !important;
+    margin-right: 0 !important;
+    margin-bottom: 0 !important;
+    text-align: center;
+    height: 100%;
+}
+
+.btn_GLhotCool h1,
+.btn_GLhotCAO h1,
+.btn_GLhotStudio h1 {
+    letter-spacing: -0.5px;
+}
+
+.btn_GLhotCAO h1,
+.btn_GLhotStudio h1 {
+    min-width: 64px !important;
+}
+
+.btn_GLhotCAO img,
+.btn_GLhotStudio img {
+    max-height: 60% !important;
+    height: 9vw !important;
+    margin: auto;
+}
+
+.btn_GLhotCool {
+    height: calc(28% - 10px) !important;
+    min-height: 80px !important;
+    background-image: url(../Areas/Mobile/Content/images/vi-vn/img_hotBG.png);
+    background-size: cover;
+}
+
+.btn_GLhotCool .t_GL {
+    display: flex;
+    align-items: flex-start;
+    text-align: center;
+    flex-direction: column;
+}
+
+.btn_GLhotCool img {
+    height: 16px;
+    margin-top: -1px;
+}
+
+.btn_GLhotCool.aniCI .img_GL:after {
+    background-image: url(../Areas/Mobile/Content/images/vi-vn/img_hotOT_CI.png);
+    animation: aniCI 3s step-end infinite;
+    -webkit-animation: aniCI 3s step-end infinite;
+}
+
+@keyframes aniCI {
+    from {
+        background-position-y: top
+    }
+
+    33% {
+        background-position-y: 11.11%;
+    }
+
+    66% {
+        background-position-y: 22.22%;
+    }
+
+    to {
+        background-position-y: top;
+    }
+}
+
+@-webkit-keyframes aniCI {
+    from {
+        background-position-y: top
+    }
+
+    33% {
+        background-position-y: 11.11%;
+    }
+
+    66% {
+        background-position-y: 22.22%;
+    }
+
+    to {
+        background-position-y: top;
+    }
+}
+
+.aniTxt {
+    margin-top: 2px;
+    position: relative;
+    z-index: 1;
+}
+
+.aniTxt:before {
+    content: '';
+    border: 2px solid #d9b442;
+    background-color: #000;
+    box-sizing: border-box;
+    border-radius: 100px;
+    width: 45px;
+    height: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.7;
+    z-index: -1;
+}
+
+.aniTxt:after {
+    content: '';
+    width: 52px;
+    height: 20px;
+    background: url(../Areas/Mobile/Content/images/vi-vn/img_CI.svg) no-repeat left top;
+    background-size: 100% auto;
+    animation: aniCI 3s step-end infinite;
+    -webkit-animation: aniCI 3s step-end infinite;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.boxGL {
+    display: flex;
+    flex-flow: column;
+    width: calc(50% - 3px);
+    height: calc(28% - 10px) !important;
+    min-height: 80px;
+    margin-bottom: 12px;
+}
+
+.boxGL [class*="btn_GL"] {
+    width: 100% !important;
+    height: calc(50% - 3px) !important;
+    min-height: auto !important;
+}
+
+.boxGL [class*="btn_GL"]:last-child {
+    margin-bottom: 0 !important;
+}
+
+[class*="btn_GL"][class*="EVO"]:not(.w100) .t_GL img,
+[class*="btn_GL"][class*="KA"]:not(.w100) .t_GL img,
+[class*="btn_GL"][class*="DS"]:not(.w100) .t_GL img,
+[class*="btn_GL"][class*="KU"]:not(.w100) .t_GL > img,
+[class*="btn_GL"][class*="3D"]:not(.w100) .t_GL img,
+[class*="btn_GL"][class*="KY"]:not(.w100) .t_GL img {
+    height: 37px;
+    margin-top: -3px;
+}
+
+[class*="btn_GL"][class*="JK"]:not(.w100) .t_GL img,
+[class*="btn_GL"][class*="SB"]:not(.w100) .t_GL img,
+[class*="btn_GL"][class*="BBIN"]:not(.w100) .t_GL img,
+[class*="btn_GL"][class*="LC"]:not(.w100) .t_GL img {
+    height: 37px;
+    margin-top: -6px;
+}
+
+.btn_GLsportKJ:not(.w100) img {
+    margin-top: -12px;
+}
+
+.btn_GLfishCQ9:not(.w100) .img_GL:after {
+    background-position-x: 1.6em;
+}
+
+.btn_GLslot3D.w100 .img_GL {
+    right: 0 !important;
+}
+
+.btn_GLslot3D.w100 .img_GL:after {
+    background-image: url(../Areas/Mobile/Content/images/vi-vn/img_slot3D.html);
+    max-height: initial !important;
+    height: 100% !important;
+    background-position-y: bottom !important;
+}
+
+/*二列三列遊戲圖片*/
+/*2*/
+.btn_GLlotoBBIN .img_GL:after,
+.btn_GLchessV8 .img_GL:after,
+.btn_GLesportOB .img_GL:after {
+    background-position-y: -55vw;
+}
+/*3*/
+.btn_GLesportSB .img_GL:after {
+    background-position-y: -110vw;
+}
+/*四列以上遊戲圖片*/
+/*2*/
+.btn_GLfishKS .img_GL:after,
+.btn_GLslotPG .img_GL:after,
+.btn_GLliveEVO .img_GL:after,
+.btn_GLsportJZ .img_GL:after {
+    background-position-y: 11.1%;
+}
+/*3*/
+.btn_GLfishAG .img_GL:after,
+.btn_GLslot3D .img_GL:after,
+.btn_GLliveAG .img_GL:after,
+.btn_GLhotSlot .img_GL:after {
+    background-position-y: 22%;
+}
+/*4*/
+.btn_GLfishDS .img_GL:after,
+.btn_GLslotCQ9 .img_GL:after,
+.btn_GLliveDG .img_GL:after,
+.btn_GLsportSB .img_GL:after {
+    background-position-y: 33%;
+}
+/*5*/
+.btn_GLfishKY .img_GL:after,
+.btn_GLslotDS .img_GL:after,
+.btn_GLliveAES .img_GL:after,
+.btn_GLsportAG .img_GL:after,
+.btn_GLhotStudio .img_GL:after {
+    background-position-y: 44%;
+}
+/*6*/
+.btn_GLfishKA .img_GL:after,
+.btn_GLslotKA .img_GL:after,
+.btn_GLliveXG .img_GL:after,
+.btn_GLsportCMD .img_GL:after,
+.btn_GLhotCool:not(.aniCI) .img_GL:after {
+    background-position-y: 55%;
+}
+/*7*/
+.btn_GLfishLC .img_GL:after,
+.btn_GLslotBNG .img_GL:after,
+.btn_GLliveWM .img_GL:after,
+.btn_GLsportAI .img_GL:after {
+    background-position-y: 66%;
+}
+/*8*/
+.btn_GLfishCQ9 .img_GL:after,
+.btn_GLslotRK5 .img_GL:after,
+.btn_GLliveSA .img_GL:after,
+.btn_GLsportBBIN .img_GL:after {
+    background-position-y: 77%;
+}
+/*9*/
+.btn_GLfishV8 .img_GL:after,
+.btn_GLsportOB .img_GL:after,
+.btn_GLslotPLS .img_GL:after,
+.btn_GLliveGPI .img_GL:after {
+    background-position-y: 88%;
+}
+/*10*/
+.btn_GLslotAT .img_GL:after,
+.btn_GLliveOB .img_GL:after {
+    background-position-y: 99%;
+}
+
+@media (min-aspect-ratio:5/10) {
+    .btn_GLliveKU:not(.w100) .img_GL:after { /*-*/
+        background-position-x: 0.3em;
+    }
+}
+
+@media (min-width: 350px) {
+    .GameList {
+        padding-top: 7px;
+    }
+
+    [class*="btn_GL"] {
+        margin-bottom: 7px;
+    }
+
+    .boxGL,
+    [class*="btn_GL"]:last-child,
+    .GameList_R > [class*="btn_GL"]:not(.w100):nth-last-child(2) {
+        margin-bottom: 13px;
+    }
+
+    .GameList_L [class*="btn_GL"] {
+        height: calc((100% - 62px)/8);
+    }
+
+    .GameList_R:not([class*="wholeT"]) [class*="btn_GL"] {
+        height: calc(25% - 9px);
+    }
+
+    .GameList_R [class*="btn_GLhot"]:not(.btn_GLhotCool) {
+        height: calc(36% - 9px);
+    }
+
+    .btn_GLhotCool,
+    .boxGL {
+        height: calc(28% - 9px) !important;
+    }
+
+    .boxGL [class*="btn_GL"] {
+        height: calc(50% - 3.5px) !important;
+    }
+
+    .btn_GLhotCAO h1,
+    .btn_GLhotStudio h1 {
+        min-width: 70px !important;
+    }
+
+    .aniTxt:before {
+        width: 50px;
+        height: 22px;
+    }
+
+    .aniTxt:after {
+        width: 57px;
+        height: 22px;
+    }
+}
+
+@media (max-width: 375px) {
+    .GameList_R:not([class*="wholeT"]) .img_GL:after {
+        max-width: 184px;
+        max-height: 125px;
+    }
+
+    /*only for IOS*/
+    @supports (-webkit-overflow-scrolling: touch) {
+        .btn_AD ~ .container_main .GameList_R [class*="btn_GLsport"] .img_GL:after {
+            width: 18vh;
+            height: 11vh;
+        }
+    }
+}
+
+@media (min-width: 376px) and (max-width: 399px) {
+    .GameList_R:not([class*="wholeT"]) .img_GL:after {
+        max-width: 184px;
+        max-height: 125px;
+    }
+}
+
+@media (min-width: 350px) and (max-width: 399px) and (min-height: 660px) {
+    .GameList_R .w100 .t_GL img {
+        margin-top: -2px;
+    }
+}
+
+@media (min-width: 350px) and (max-width: 399px) and (min-height: 724px) {
+    .logo_CAO {
+        width: calc(47px + 0.5vw);
+    }
+
+    .btn_GLhotSlot img,
+    .btn_GLhotLoto img,
+    .btn_GLhotLive img,
+    .logo_CAO img {
+        height: 47px;
+    }
+
+    .logo_CAO img + img {
+        height: 29px;
+    }
+
+    .btn_GLhotCAO h1 {
+        line-height: 1.2em;
+    }
+
+    .btn_GLhotCool img {
+        margin-top: 2px;
+    }
+
+    .aniTxt {
+        margin-top: 3px;
+    }
+}
+
+@media (min-width: 400px) {
+    .GameList {
+        padding-top: 8px;
+    }
+
+    [class*="btn_GL"] {
+        margin-bottom: 8px;
+    }
+
+    .boxGL,
+    [class*="btn_GL"]:last-child,
+    .GameList_R > [class*="btn_GL"]:not(.w100):nth-last-child(2) {
+        margin-bottom: 14px;
+    }
+
+    .GameList_L [class*="btn_GL"] {
+        height: calc((100% - 70px)/8);
+        /*min-height: 48px;*/
+    }
+
+    .boxGL,
+    .GameList_R [class*="btn_GL"]:not(.w100) {
+        width: calc(50% - 4px);
+    }
+
+    .GameList_R:not([class*="wholeT"]) [class*="btn_GL"] {
+        height: calc(25% - 10px);
+    }
+
+    .GameList_R [class*="btn_GLhot"]:not(.btn_GLhotCool) {
+        height: calc(35% - 10px);
+    }
+
+    .GameList_R [class*="btn_GL"]:not([class*="btn_GLhot"]) .t_GL {
+        width: 59px;
+        margin-left: 9px;
+        margin-right: 9px;
+    }
+
+    .t_GL {
+        margin: 15px;
+    }
+
+    .t_GL img {
+        height: 55px;
+    }
+
+    .logo_CAO {
+        width: calc(55px + 0.5vw);
+    }
+
+    .logo_CAO img + img {
+        height: 34px;
+        margin-top: -10px;
+    }
+
+    .btn_GLhotSlot img,
+    .btn_GLhotLoto img,
+    .btn_GLhotLive img,
+    .btn_GLhotSport img {
+        margin-top: -3px;
+    }
+
+    .btn_GLhotCool,
+    .boxGL {
+        height: calc(30% - 10px) !important;
+        min-height: 93px !important;
+    }
+
+    .boxGL [class*="btn_GL"] {
+        height: calc(50% - 4px) !important;
+    }
+
+    .btn_GLhotCool h1,
+    .btn_GLhotCAO h1,
+    .btn_GLhotStudio h1 {
+        letter-spacing: 0;
+    }
+
+    .btn_GLhotCool img {
+        height: 20px;
+        margin-top: 5px;
+    }
+
+    .btn_GLhotCAO h1,
+    .btn_GLhotStudio h1 {
+        min-width: 81px !important;
+    }
+
+    .aniTxt {
+        margin-top: 7px;
+    }
+
+    .aniTxt:before {
+        width: 54px;
+        height: 24px;
+    }
+
+    .aniTxt:after {
+        width: 62px;
+        height: 24px;
+    }
+
+    [class*="btn_GL"][class*="EVO"]:not(.w100) .t_GL img,
+    [class*="btn_GL"][class*="KA"]:not(.w100) .t_GL img,
+    [class*="btn_GL"][class*="DS"]:not(.w100) .t_GL img,
+    [class*="btn_GL"][class*="KU"]:not(.w100) .t_GL > img,
+    [class*="btn_GL"][class*="3D"]:not(.w100) .t_GL img,
+    [class*="btn_GL"][class*="KY"]:not(.w100) .t_GL img {
+        height: 45px;
+    }
+
+    [class*="btn_GL"][class*="JK"]:not(.w100) .t_GL img,
+    [class*="btn_GL"][class*="SB"]:not(.w100) .t_GL img,
+    [class*="btn_GL"][class*="BBIN"]:not(.w100) .t_GL img,
+    [class*="btn_GL"][class*="LC"]:not(.w100) .t_GL img {
+        height: 43px;
+    }
+}
+
+@media (min-width: 400px) and (max-width: 529px) {
+    .GameList_R:not([class*="wholeT"]) .img_GL:after {
+        max-width: 201px;
+        max-height: 137px;
+        min-width: 148px;
+        min-height: 102px;
+    }
+}
+
+@media (min-width: 400px) and (max-height: 773px) {
+    .t_GL {
+        margin: 10px 15px;
+    }
+
+    .logo_CAO {
+        width: calc(47px + 0.5vw);
+    }
+
+    .btn_GLhotSlot img,
+    .btn_GLhotLoto img,
+    .btn_GLhotLive img,
+    .logo_CAO img {
+        height: 47px;
+    }
+
+    .logo_CAO img + img {
+        height: 28px;
+    }
+
+    .btn_GLhotCool img {
+        margin-top: 2px;
+    }
+
+    .aniTxt {
+        margin-top: 4px;
+    }
+}
+
+@media (min-width: 400px) and (max-width: 462px) and (min-height: 774px) and (max-height: 835px) {
+    .btn_AD ~ .container_main .logo_CAO {
+        width: calc(47px + 0.5vw);
+    }
+
+    .btn_AD ~ .container_main .btn_GLhotSlot img,
+    .btn_AD ~ .container_main .btn_GLhotLoto img,
+    .btn_AD ~ .container_main .btn_GLhotLive img,
+    .btn_AD ~ .container_main .logo_CAO img {
+        height: 47px;
+    }
+
+    .btn_AD ~ .container_main .logo_CAO img + img {
+        height: 28px;
+    }
+}
+
+@media (min-width: 400px) and (max-width: 529px) and (min-height: 774px) {
+    .GameList_R .w100 .t_GL img {
+        margin-top: -2px;
+    }
+
+    .btn_GLhotCAO h1 {
+        line-height: 1.2em;
+    }
+}
+
+@media (min-width: 530px) {
+    .GameList {
+        padding-top: 10px;
+    }
+
+    [class*="btn_GL"] {
+        margin-bottom: 10px;
+    }
+
+    .GameList_L [class*="btn_GL"] {
+        height: calc((100% - 84px)/8);
+        min-height: 41px;
+    }
+
+    .GameList_L h2 {
+        font-size: 0.65em;
+        white-space: nowrap;
+    }
+
+    .boxGL,
+    .GameList_R [class*="btn_GL"]:not(.w100) {
+        width: calc(50% - 5px);
+    }
+
+    .GameList_R [class*="btn_GL"]:not(.w100) h1 span {
+        line-height: normal;
+    }
+
+    .GameList_R [class*="btn_GL"]:not([class*="btn_GLhot"]) .t_GL {
+        width: 98px;
+        white-space: nowrap;
+    }
+
+    .GameList_R:not([class*="wholeT"]) [class*="btn_GL"] {
+        height: calc(25% - 12px);
+    }
+
+    .GameList_R [class*="btn_GLhot"]:not(.btn_GLhotCool) {
+        height: calc(34% - 12px);
+        min-height: 98px;
+    }
+
+    .GameList_R:not([class*="wholeT"]) .img_GL:after {
+        width: 21vh;
+        height: 14vh;
+        min-width: 142px;
+        min-height: 98px;
+        background-position-x: right;
+    }
+
+    .btn_AD ~ .container_main .GameList_R [class*="btn_GLhot"] .img_GL:after,
+    .btn_AD ~ .container_main .GameList_R [class*="btn_GLsport"] .img_GL:after {
+        width: 20vh;
+        height: 13.5vh;
+    }
+
+    .GameList_R[class*="wholeT"] .img_GL {
+        right: 8vw;
+    }
+
+    .GameList_R[class*="wholeT"] .img_GL:after {
+        width: 40vw;
+        max-height: 38vw;
+    }
+
+    /*    .GameList_R[class*="wholeT"] [class*="btn_GL"]:nth-child(2) .img_GL:after {
+        background-position-y: -40vw;
+    }
+
+    .GameList_R[class*="wholeT"] [class*="btn_GL"]:nth-child(3) .img_GL:after {
+        background-position-y: -79vw;
+    }*/ /*-*/
+    /*二列三列遊戲圖片*/ /*-*/
+    /*2*/
+    .btn_GLlotoBBIN .img_GL:after,
+    .btn_GLchessV8 .img_GL:after,
+    .btn_GLesportOB .img_GL:after {
+        background-position-y: -40vw;
+    }
+    /*3*/
+    .btn_GLesportSB .img_GL:after {
+        background-position-y: -79vw;
+    }
+
+    .GameList_R:not([class*="wholeT"]) .w100 .img_GL {
+        right: 15vw;
+    }
+
+    .btn_GLlotoKU {
+        background-size: cover !important;
+        background-position-y: center !important;
+    }
+
+    .btn_GLlotoKU .img_GL {
+        right: 0 !important;
+    }
+
+    .btn_GLlotoKU .img_GL:after {
+        background-position-x: right !important;
+    }
+
+    .btn_GLhotSlot .img_GL:after {
+        bottom: 0;
+    }
+
+    .btn_GLhotStudio .img_GL:after {
+        right: 2.5vw;
+    }
+
+    .btn_GLhotCAO img {
+        height: 10vw !important;
+        max-height: 80%;
+    }
+
+    .btn_GLhotCool,
+    .boxGL {
+        height: calc(32% - 12px) !important;
+    }
+
+    .boxGL [class*="btn_GL"] {
+        height: calc(50% - 5px) !important;
+    }
+
+    .btn_GLhotStudio h1,
+    .btn_GLhotCAO h1 {
+        min-width: calc(50% - 5px) !important;
+    }
+
+    .btn_GLsportKU:not(.w100) .logo_CAO {
+        width: auto;
+        flex-wrap: nowrap;
+        -webkit-transform: scale(0.9,0.9);
+        transform: scale(0.9,0.9);
+    }
+
+    .btn_GLsportKU:not(.w100) .logo_CAO img + img {
+        margin-left: 1vw;
+    }
+
+    .btn_GLslot3D.w100 .img_GL {
+        right: 8vw !important;
+    }
+}
+
+@media (min-width: 530px) and (max-width: 767px) and (max-height: 755px) {
+    .t_GL {
+        margin: 10px 15px;
+    }
+
+    .GameList_R [class*="btn_GL"] {
+        min-height: 70px;
+    }
+}
+
+@media (min-width: 530px) and (max-width: 767px) and (min-height: 800px) {
+    .GameList_R .w100 .t_GL img {
+        margin-top: -2px;
+    }
+
+    .btn_GLhotCAO h1 {
+        line-height: 1.2em;
+    }
+}
+
+@media (min-width: 768px) {
+    .GameList {
+        padding-top: 15px;
+    }
+
+    [class*="btn_GL"] {
+        margin-bottom: 15px !important;
+    }
+
+    .GameList_L [class*="btn_GL"] {
+        height: calc((100% - 120px)/8);
+        min-height: 52px;
+    }
+
+    .GameList_L h2 {
+        font-size: 0.8em;
+    }
+
+    .t_GL {
+        margin: 20px;
+    }
+
+    .t_GL h1 {
+        font-size: 0.95em !important;
+    }
+
+    .t_GL h1 span {
+        font-size: .9em;
+    }
+
+    .t_GL img {
+        height: 7.5vw;
+        max-height: 57px;
+    }
+
+    .GameList_R [class*="btn_GL"] {
+        min-height: 92px;
+    }
+
+    .boxGL,
+    .GameList_R [class*="btn_GL"]:not(.w100) {
+        width: calc(50% - 8px);
+    }
+
+    .GameList_R [class*="btn_GL"]:not([class*="btn_GLhot"]) .t_GL {
+        width: 135px;
+        margin-left: 1.5vw;
+        margin-right: 1.5vw;
+    }
+
+    .GameList_R:not([class*="wholeT"]) [class*="btn_GL"] {
+        height: calc(25% - 15px);
+    }
+
+    .GameList_R .w100 .t_GL img {
+        margin-top: -2px;
+    }
+
+    .GameList_R:not([class*="wholeT"]) .img_GL:after {
+        min-width: 178px;
+        min-height: 118px;
+    }
+
+    [class*="btn_GL"][class*="JK"]:not(.w100) .t_GL img,
+    [class*="btn_GL"][class*="SB"]:not(.w100) .t_GL img,
+    [class*="btn_GL"][class*="BBIN"]:not(.w100) .t_GL img,
+    [class*="btn_GL"][class*="LC"]:not(.w100) .t_GL img,
+    [class*="btn_GL"][class*="EVO"]:not(.w100) .t_GL img,
+    [class*="btn_GL"][class*="KA"]:not(.w100) .t_GL img,
+    [class*="btn_GL"][class*="DS"]:not(.w100) .t_GL img,
+    [class*="btn_GL"][class*="KU"]:not(.w100) .t_GL > img,
+    [class*="btn_GL"][class*="3D"]:not(.w100) .t_GL img,
+    [class*="btn_GL"][class*="KY"]:not(.w100) .t_GL img {
+        height: 6.5vw;
+    }
+
+    .GameList_R [class*="btn_GLhot"]:not(.btn_GLhotCool) {
+        height: calc(36% - 15px);
+    }
+
+    .logo_CAO {
+        width: 8vw;
+        max-width: 60px;
+    }
+
+    .logo_CAO img + img {
+        height: 36px
+    }
+
+    .btn_GLsportKU:not(.w100) .logo_CAO {
+        -webkit-transform: scale(1,1);
+        transform: scale(1,1);
+    }
+
+    .btn_GLsportKU.w100 .logo_CAO img + img {
+        margin-left: 10px !important;
+    }
+
+    .btn_GLhotCAO h1 {
+        line-height: 1.2em;
+    }
+
+    .btn_GLhotStudio .img_GL:after {
+        right: 4vw;
+    }
+
+    .btn_GLhotCool,
+    .boxGL {
+        height: calc(28% - 15px) !important;
+        min-height: 104px !important;
+    }
+
+    .boxGL [class*="btn_GL"] {
+        height: calc(50% - 7.5px) !important;
+    }
+
+    .btn_GLhotCool img {
+        height: 3vw;
+        max-height: 23px;
+    }
+}
+
+@media (min-width: 768px) and (max-height: 1000px) {
+    .t_GL {
+        margin: 2vw 3vw;
+    }
+
+    .GameList_R .w100 .t_GL img {
+        margin-top: -8px;
+    }
+
+    .btn_GLhotCAO h1 {
+        line-height: 1em;
+    }
+
+    .btn_GLhotCool img {
+        height: 18px;
+        margin-top: 3px;
+    }
+
+    .aniTxt {
+        margin-top: 5px;
+    }
+
+    .btn_GLhotLive .img_GL:after {
+        background-position-y: calc(100% + 2vh) !important;
+    }
+}
+
+@media (min-width: 1024px) {
+    .GameList_R:not([class*="wholeT"]) .img_GL:after {
+        min-width: 215px;
+        min-height: 143px;
+    }
+}
+
+@media (orientation: landscape) {
+    body {
+        overflow: initial;
+    }
+
+    .container_main {
+        position: static;
+    }
+
+    .GameList {
+        height: calc(100vh - 40px);
+    }
+
+    .btn_AD ~ .container_main .GameList {
+        height: calc(100vh - 95px);
+    }
+
+    .GameList_R:not([class*="wholeT"]) .img_GL:after {
+        background-position-x: right;
+    }
+
+    .btn_GLlotoKU {
+        background-size: cover !important;
+        background-position-y: center !important;
+    }
+
+    .logo_CAO {
+        flex-wrap: nowrap;
+        max-width: initial;
+    }
+
+    .logo_CAO img:nth-last-child(3) {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .logo_CAO img + img {
+        margin-left: 1.5vw !important;
+    }
+}
+
+@media (min-height: 451px) and (min-width: 350px) and (orientation: landscape) {
+    .GameList {
+        padding-bottom: 48px;
+    }
+}
+
+@media (min-height: 451px) and (min-width: 400px) and (orientation: landscape) {
+    .GameList {
+        padding-bottom: 55px;
+    }
+}
+
+@media (min-height: 451px) and (min-width: 768px) and (orientation: landscape) {
+    .GameList {
+        padding-bottom: 75px;
+    }
+}
+
+@media (min-width: 768px) and (orientation: landscape) {
+    .t_GL {
+        margin: 15px;
+    }
+
+    .t_GL h1 {
+        min-width: 55px;
+    }
+
+    .t_GL img {
+        height: 55px;
+    }
+
+    .logo_CAO img + img {
+        margin-left: 10px !important;
+    }
+
+    .btn_GLhotCool img {
+        height: 20px;
+    }
+
+    [class*="btn_GL"][class*="EVO"]:not(.w100) .t_GL img,
+    [class*="btn_GL"][class*="KA"]:not(.w100) .t_GL img,
+    [class*="btn_GL"][class*="DS"]:not(.w100) .t_GL img,
+    [class*="btn_GL"][class*="KU"]:not(.w100) .t_GL > img,
+    [class*="btn_GL"][class*="3D"]:not(.w100) .t_GL img,
+    [class*="btn_GL"][class*="KY"]:not(.w100) .t_GL img {
+        height: 45px;
+    }
+
+    [class*="btn_GL"][class*="JK"]:not(.w100) .t_GL img,
+    [class*="btn_GL"][class*="SB"]:not(.w100) .t_GL img,
+    [class*="btn_GL"][class*="BBIN"]:not(.w100) .t_GL img,
+    [class*="btn_GL"][class*="LC"]:not(.w100) .t_GL img {
+        height: 43px;
+    }
+}
+
+/*維護中狀態/登录泡泡*/
+[class*="btn_GL"].maintain .gameMainTain_text {
+    display: flex;
+}
+
+.gameMainTain_text {
+    color: #fff;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-weight: bold;
+    font-size: .8em;
+    width: 19vw;
+    height: 16vw;
+    max-width: 80px;
+    max-height: 65px;
+    background: url(../Areas/Mobile/Content/images/vi-vn/img_fixBG.svg) no-repeat left bottom;
+    background-size: cover;
+    line-height: 1em;
+    white-space: nowrap;
+    border-radius: 0 0 10px 0;
+    padding-left: 4vw;
+    box-sizing: border-box;
+}
+
+.gameMainTain_text:before {
+    content: '';
+    width: 19px;
+    height: 19px;
+    max-width: 28px;
+    max-height: 28px;
+    background: url(../Areas/Mobile/Content/images/vi-vn/icon_fix.svg) no-repeat center;
+    background-size: 100% auto;
+    margin-bottom: 4px;
+}
+
+.gameMainTain_in {
+    position: absolute;
+    top: calc(100% - 1.2em);
+    left: 0;
+    background-color: #ff9900;
+    color: #fff;
+    padding: 6px 10px 5px;
+    border-radius: 3px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+    font-size: 0.7em;
+    line-height: 1.2em;
+    z-index: 3;
+    display: none;
+}
+
+.gameMainTain_in:before {
+    content: '';
+    position: absolute;
+    top: -8px;
+    left: 10px;
+    border-style: solid;
+    border-width: 0 0 9px 9px;
+    border-color: transparent transparent #ff9900 transparent;
+}
+
+.GameList_R [class*="btn_GL"]:last-child .gameMainTain_in,
+.GameList_R [class*="btn_GL"]:not([class*="w100"]):nth-last-child(2) .gameMainTain_in {
+    bottom: calc(100% - 1.2em);
+    top: auto;
+}
+
+.GameList_R [class*="btn_GL"]:last-child .gameMainTain_in:before,
+.GameList_R [class*="btn_GL"]:not([class*="w100"]):nth-last-child(2) .gameMainTain_in:before {
+    bottom: -8px;
+    top: auto;
+    border-width: 9px 9px 0 0;
+    border-color: #ff9900 transparent transparent transparent;
+}
+
+.boxGL .gameMainTain_text {
+    max-height: 100%;
+    font-size: .7em;
+}
+
+@media (min-width: 350px) {
+    .gameMainTain_text:before {
+        width: 21px;
+        height: 21px;
+    }
+}
+
+@media (min-width: 375px) {
+    .gameMainTain_text:before {
+        width: 23px;
+        height: 23px;
+    }
+
+    .boxGL .gameMainTain_text:before {
+        width: 21px;
+        height: 21px;
+    }
+}
+
+@media (min-width: 400px) {
+    .gameMainTain_text {
+        padding-left: 20px;
+    }
+
+    .gameMainTain_text:before {
+        width: 28px;
+        height: 28px;
+    }
+
+    .boxGL .gameMainTain_text:before {
+        width: 23px;
+        height: 23px;
+    }
+
+    .gameMainTain_in:before {
+        left: 12px;
+    }
+}
+
+@media (min-width:534px) and (max-width:601px) and (min-height:868px) {
+    .boxGL .gameMainTain_text {
+        max-height: 65px;
+    }
+}
+
+@media (min-width:700px) and (max-width:715px) and (min-height:910px) {
+    .boxGL .gameMainTain_text {
+        max-height: 65px;
+    }
+}
+
+@media (min-width:768px) and (min-height:1055px) {
+    .boxGL .gameMainTain_text {
+        max-height: 65px;
+    }
+}
+
+@media (min-width: 768px) {
+    .gameMainTain_in {
+        font-size: 0.9em;
+    }
+
+    .gameMainTain_in:before {
+        top: -12px;
+        left: 14px;
+        border-width: 0 0 13px 14px;
+    }
+}
+
+@media (min-height: 768px) and (orientation: landscape) {
+    .boxGL .gameMainTain_text {
+        max-height: 65px;
+    }
+}
+
+/*最新/熱門標籤*/
+.GL_hot, .GL_new {
+    width: 40px;
+    height: 40px;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+}
+
+.GL_hot {
+    background-image: url(../Areas/Mobile/Content/images/vi-vn/icon_hot.png);
+    background-size: cover;
+}
+
+.GL_new {
+    background-image: url(../Areas/Mobile/Content/images/vi-vn/icon_new.png);
+    background-size: cover;
+}
+
+@media (min-width: 350px) {
+    .GL_hot, .GL_new {
+        width: 45px;
+        height: 45px;
+    }
+}
+
+@media (min-width: 400px) {
+    .GL_hot, .GL_new {
+        width: 52px;
+        height: 52px;
+    }
+}
+
+/*領取禮金入口*/
+.btn_receive {
+    position: fixed;
+    z-index: 9;
+    right: 0;
+    top: 41%;
+    width: 35px;
+    height: 85px;
+    color: #fff;
+    background-color: #ffa61a;
+    border-radius: 100px 100px 0 80px;
+    line-height: 1em;
+    font-size: 1em;
+    text-shadow: 1px 1px 2px #b27512;
+}
+
+.btn_receive span {
+    transform: rotate(90deg) translate(145%);
+    -webkit-transform: rotate(90deg) translate(145%);
+    white-space: nowrap;
+    position: absolute;
+    right: 0;
+    left: 0;
+    margin: auto;
+}
+
+.btn_receive:before {
+    content: '';
+    background: url(../Areas/Mobile/Content/images/vi-vn/btn_sideGift.svg) no-repeat center;
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    top: 0;
+    background-size: 100% auto;
+}
+
+.btn_receive:active {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+@media (min-width: 350px) {
+    .btn_receive {
+        font-size: .9em;
+    }
+}
+
+@media (min-width: 400px) {
+    .btn_receive {
+        width: 40px;
+        height: 96px;
+        font-size: .95em;
+    }
+
+    .btn_receive:before {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+@media (min-width: 768px) {
+    .btn_receive {
+        width: 50px;
+        height: 119px;
+        font-size: 1.1em;
+    }
+
+    .btn_receive:before {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+/*AV女优活动*/ /*-*/
+.btn_AVactiv {
+    background: url(../Areas/Mobile/Content/images/vi-vn/btn_AV.png) no-repeat center;
+    background-size: 100% auto;
+    width: 74px;
+    height: 79px;
+    position: fixed;
+    left: 15%;
+    bottom: 50px;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.btn_AVactiv:active {
+    filter: contrast(115%);
+}
+
+.btn_closeAV {
+    background: rgba(0,0,0,.25) url(../Areas/Mobile/Content/images/vi-vn/btn_close_white.svg) no-repeat center;
+    background-size: 7px auto;
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    left: 57px;
+    bottom: 58px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.btn_closeAV:active {
+    background-color: rgba(0,0,0,.5);
+}
+
+@media (min-width: 350px) {
+    .btn_AVactiv {
+        width: 84px;
+        height: 90px;
+        bottom: 56px;
+    }
+
+    .btn_closeAV {
+        left: 66px;
+        bottom: 68px;
+    }
+}
+
+@media (min-width: 400px) {
+    .btn_AVactiv {
+        width: 96px;
+        height: 103px;
+        bottom: 63px;
+    }
+
+    .btn_closeAV {
+        left: 73px;
+        bottom: 75px;
+        width: 20px;
+        height: 20px;
+        background-size: 8px auto;
+    }
+}
+
+@media (min-width: 768px) {
+    .btn_AVactiv {
+        bottom: 84px;
+    }
+}
+
+@media (max-height: 450px) {
+    .btn_AVactiv {
+        bottom: 0;
+    }
+}

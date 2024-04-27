@@ -1,0 +1,1626 @@
+﻿.gameType {
+    display: table;
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.gameTypeList {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+    position: relative;
+    height: 250px;
+}
+
+.exterior {
+    transition: all 0.5s ease;
+}
+
+    .exterior img {
+        display: block;
+        margin: 0 auto;
+    }
+
+    .exterior h5 {
+        color: #333;
+        font-weight: normal;
+        font-size: 15px;
+    }
+
+.in {
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    display: none;
+}
+
+.gameTypeList:hover .exterior {
+    opacity: 0;
+}
+
+.gameTypeList:hover .in {
+    display: block;
+    opacity: 1;
+}
+
+/*真人*/
+.liveGame {
+}
+
+    .liveGame:hover {
+        animation: liveGame 0.5s forwards;
+        -webkit-animation: liveGame 0.5s forwards;
+        cursor: pointer;
+    }
+
+.icon_liveGame {
+    width: 200px;
+    height: 180px;
+    margin: -7px auto;
+    position: relative;
+}
+
+    .icon_liveGame:after {
+        visibility: initial;
+        background: url(../../Images/vi-vn/Graph/icon_indexImg.png) no-repeat -727px -456px;
+        width: 265px;
+        height: 180px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-52%,-50%);
+        -webkit-transform: translate(-52%,-50%);
+    }
+
+@keyframes liveGame {
+    from {
+        width: 265px;
+    }
+
+    to {
+        width: 430px;
+    }
+}
+
+@-webkit-keyframes liveGame {
+    from {
+        width: 265px;
+    }
+
+    to {
+        width: 430px;
+    }
+}
+
+.liveGame_in {
+    position: relative;
+    height: 250px;
+    left: 0;
+}
+
+.gameTypeList.off .liveGame_in {
+    cursor: not-allowed;
+}
+
+.LG_bg {
+    position: absolute;
+    bottom: 0;
+    left: -20px;
+    opacity: 0;
+    animation: LG_bg 1s ease forwards;
+    -webkit-animation: LG_bg 1s ease forwards;
+}
+
+@keyframes LG_bg {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes LG_bg {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.LG01_people {
+    background: url(../../Images/vi-vn/Graph/icon_indexImg.png) no-repeat left -172px;
+    width: 430px;
+    height: 165px;
+    position: absolute;
+    top: 0;
+    left: -12px;
+    animation: LG01_people 1.1s ease 0.3s forwards;
+    -webkit-animation: LG01_people 1.1s ease 0.3s forwards;
+    opacity: 0;
+}
+
+@keyframes LG01_people {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes LG01_people {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.LG_text01 {
+    animation: LG_text01 1s ease 0.7s forwards;
+    -webkit-animation: LG_text01 1s ease 0.7s forwards;
+    position: absolute;
+    bottom: 50px;
+    display: block;
+    z-index: 2;
+    opacity: 0;
+    color: #b50135;
+    font-weight: bold;
+    font-size: 25px;
+    letter-spacing: -1px;
+}
+
+@keyframes LG_text01 {
+    from {
+        -webkit-transform: translate(10%,0);
+        opacity: 0;
+    }
+
+    to {
+        -webkit-transform: translate(0,0);
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes LG_text01 {
+    from {
+        -webkit-transform: translate(10%,0);
+        opacity: 0;
+    }
+
+    to {
+        -webkit-transform: translate(0,0);
+        opacity: 1;
+    }
+}
+
+.LG_text02 {
+    animation: LG_text02 1s ease 0.7s forwards;
+    -webkit-animation: LG_text02 1s ease 0.7s forwards;
+    position: absolute;
+    bottom: 12px;
+    display: block;
+    z-index: 2;
+    opacity: 0;
+    color: #10316f;
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 1.2em;
+    letter-spacing: -0.8px;
+    word-spacing: -0.5px;
+}
+
+@keyframes LG_text02 {
+    from {
+        transform: translate(-10%,0);
+        opacity: 0;
+    }
+
+    to {
+        transform: translate(0,0);
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes LG_text02 {
+    from {
+        transform: translate(-10%,0);
+        opacity: 0;
+    }
+
+    to {
+        transform: translate(0,0);
+        opacity: 1;
+    }
+}
+
+.btn_LG_playGame, .btn_LG_playGame_off {
+    border-radius: 3px;
+    color: #fff;
+    position: absolute;
+    left: 306px;
+    bottom: 14px;
+    font-size: 16px;
+    z-index: 1;
+    cursor: pointer;
+    animation: btn_LG_playGame 0.5s ease 1.3s forwards;
+    -webkit-animation: btn_LG_playGame 0.5s ease 1.3s forwards;
+    opacity: 0;
+    white-space: nowrap;
+}
+
+.btn_LG_playGame {
+    padding: 6px 9px 7px 28px;
+    background-color: #930000;
+}
+
+.gameTypeList.off .btn_LG_playGame {
+    display: none;
+}
+
+.btn_LG_playGame:before {
+    content: '';
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 10px;
+    margin: auto 0;
+    border-style: solid;
+    border-width: 5px 0 5px 7px;
+    border-color: transparent transparent transparent rgba(255,255,255,0.8);
+}
+
+.btn_LG_playGame:hover {
+    background-color: #b50236;
+}
+
+.btn_LG_playGame_off {
+    padding: 6px 11px 7px;
+    display: none;
+    background-color: #888;
+    cursor: not-allowed;
+    height: 18px;
+}
+
+.gameTypeList.off .btn_LG_playGame_off {
+    display: block;
+}
+
+.btn_LG_playGame_off:before {
+    content: '';
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 10px;
+    margin: auto 0;
+}
+
+.btn_LG_playGame_off img {
+    margin-right: 10px;
+    vertical-align: top;
+}
+
+@keyframes btn_LG_playGame {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes btn_LG_playGame {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/*運動*/
+.sportsLive {
+}
+
+    .sportsLive:hover {
+        animation: sportsLive 0.5s forwards;
+        -webkit-animation: sportsLive 0.5s forwards;
+        cursor: pointer;
+    }
+
+.icon_sportsLive {
+    background: url(../../Images/vi-vn/Graph/icon_indexImg.png) no-repeat -179px 8px;
+    width: 165px;
+    height: 165px;
+    margin: 0 auto;
+}
+
+@keyframes sportsLive {
+    from {
+        width: 290px;
+    }
+
+    to {
+        width: 450px;
+    }
+}
+
+@-webkit-keyframes sportsLive {
+    from {
+        width: 290px;
+    }
+
+    to {
+        width: 450px;
+    }
+}
+
+.sportsLive_in {
+    position: relative;
+    height: 250px;
+}
+
+.gameTypeList.off .sportsLive_in {
+    cursor: not-allowed;
+}
+
+.SL01 {
+    position: relative;
+    width: 230px;
+    height: 250px;
+    top: 0;
+    bottom: 0;
+    left: 60px;
+    margin: auto 0;
+}
+
+.SL_bg {
+    background: url(../../Images/vi-vn/Graph/icon_indexImg.png) no-repeat left -415px;
+    width: 353px;
+    height: 203px;
+    position: absolute;
+    bottom: 44px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    opacity: 0;
+    animation: SL_bg 0.15s ease-in 0.5s forwards;
+    -webkit-animation: SL_bg 0.15s ease-in 0.5s forwards;
+}
+
+@keyframes SL_bg {
+    0% {
+        transform: translate(0,-20%);
+        opacity: 0;
+    }
+
+    50% {
+        transform: translate(0,0);
+        opacity: 1;
+    }
+
+    75% {
+        transform: translate(0,-4%);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translate(0,0);
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes SL_bg {
+    0% {
+        -webkit-transform: translate(0,-20%);
+        opacity: 0;
+    }
+
+    50% {
+        -webkit-transform: translate(0,0);
+        opacity: 1;
+    }
+
+    75% {
+        -webkit-transform: translate(0,-4%);
+        opacity: 1;
+    }
+
+    100% {
+        -webkit-transform: translate(0,0);
+        opacity: 1;
+    }
+}
+
+[class*="SL_text"] {
+    text-shadow: 1px 1px 2px #000, -1px -1px 3px rgba(0,0,0,0.1);
+    font-size: 23px;
+    font-weight: bold;
+    position: absolute;
+    z-index: 5;
+    opacity: 0;
+}
+
+.SL_text01, .SL_text02 {
+    color: #ff8485;
+    font-weight: bold;
+    animation: SL_text01 0.9s ease 0.6s forwards;
+    -webkit-animation: SL_text01 0.9s ease 0.6s forwards;
+    left: 72px;
+    top: 134px;
+}
+
+.SL_text02 {
+    left: 96px;
+    top: 152px;
+}
+
+@keyframes SL_text01 {
+    from {
+        transform: skew(0,-6deg) translate(-2%,0);
+        opacity: 0;
+    }
+
+    to {
+        transform: skew(0,-6deg) translate(3%,0);
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes SL_text01 {
+    from {
+        transform: skew(0,-6deg) translate(-2%,0);
+        opacity: 0;
+    }
+
+    to {
+        transform: skew(0,-6deg) translate(3%,0);
+        opacity: 1;
+    }
+}
+
+.SL_text03 {
+    color: #fff;
+    animation: SL_text02 0.9s ease 0.6s forwards;
+    -webkit-animation: SL_text02 0.9s ease 0.6s forwards;
+    right: 166px;
+    top: 175px;
+}
+
+@keyframes SL_text02 {
+    from {
+        transform: skew(0,-6deg) translate(5%,0);
+        opacity: 0;
+    }
+
+    to {
+        transform: skew(0,-6deg) translate(0,0);
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes SL_text02 {
+    from {
+        transform: skew(0,-6deg) translate(5%,0);
+        opacity: 0;
+    }
+
+    to {
+        transform: skew(0,-6deg) translate(0,0);
+        opacity: 1;
+    }
+}
+
+.btn_SL_playGame, .btn_SL_playGame_off {
+    border-radius: 3px;
+    color: #fff;
+    position: absolute;
+    bottom: 15px;
+    left: 255px;
+    font-size: 16px;
+    z-index: 1;
+    cursor: pointer;
+    animation: btn_SL_playGame 0.5s ease 0.8s forwards;
+    -webkit-animation: btn_SL_playGame 0.5s ease 0.8s forwards;
+    opacity: 0;
+    white-space: nowrap;
+}
+
+.btn_SL_playGame {
+    background-color: #ff8485;
+    padding: 6px 9px 7px 28px;
+}
+
+.gameTypeList.off .btn_SL_playGame {
+    display: none;
+}
+
+.btn_SL_playGame:before {
+    content: '';
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 10px;
+    margin: auto 0;
+    border-style: solid;
+    border-width: 5px 0 5px 7px;
+    border-color: transparent transparent transparent rgba(255,255,255,0.8);
+}
+
+.btn_SL_playGame:hover {
+    background-color: #ffa5a6;
+}
+
+.btn_SL_playGame_off {
+    padding: 6px 11px 7px;
+    display: none;
+    background-color: #888;
+    cursor: not-allowed;
+    height: 18px;
+}
+
+.gameTypeList.off .btn_SL_playGame_off {
+    display: block;
+}
+
+.btn_SL_playGame_off:before {
+    content: '';
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 10px;
+    margin: auto 0;
+}
+
+.icon_maintain_w {
+    background: url(../../Images/vi-vn/Graph/icon_indexImg.png) no-repeat -41px -819px;
+    width: 21px;
+    height: 21px;
+    margin: 0 10px 0 0;
+    vertical-align: middle;
+    display: inline-block;
+}
+
+@keyframes btn_SL_playGame {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes btn_SL_playGame {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/*影城*/
+.freeMovie {
+}
+
+    .freeMovie:hover {
+        animation: freeMovie 0.5s forwards;
+        -webkit-animation: freeMovie 0.5s forwards;
+        cursor: pointer;
+    }
+
+.icon_freeMovie {
+    background: url(../../Images/vi-vn/Graph/icon_indexImg.png) no-repeat -345px 5px;
+    width: 155px;
+    height: 165px;
+    margin: auto;
+}
+
+@keyframes freeMovie {
+    from {
+        width: 290px;
+    }
+
+    to {
+        width: 420px;
+    }
+}
+
+@-webkit-keyframes freeMovie {
+    from {
+        width: 290px;
+    }
+
+    to {
+        width: 420px;
+    }
+}
+
+.freeMovie_in {
+    position: relative;
+    height: 235px;
+    margin-bottom: 15px;
+    overflow: hidden;
+}
+
+.gameTypeList.off .freeMovie_in {
+    cursor: not-allowed;
+}
+
+.FM02_blurry {
+    background: url(../../Images/vi-vn/Graph/icon_indexImg.png) no-repeat -358px -439px;
+    width: 353px;
+    height: 212px;
+    position: absolute;
+    right: 38px;
+    bottom: 0;
+    animation: FM02_blurry 0.4s ease-out 0.4s forwards;
+    -webkit-animation: FM02_blurry 0.4s ease-out 0.4s forwards;
+    opacity: 0;
+    z-index: 2;
+}
+
+@keyframes FM02_blurry {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes FM02_blurry {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.FM_text01 {
+    color: #00c2ff;
+    text-shadow: 1px 1px 2px #000;
+    font-size: 32px;
+    font-weight: bold;
+    animation: FM_text01 1s ease 0.7s forwards;
+    -webkit-animation: FM_text01 1s ease 0.7s forwards;
+    position: absolute;
+    right: 70px;
+    top: 75px;
+    z-index: 5;
+    opacity: 0;
+}
+
+@keyframes FM_text01 {
+    from {
+        transform: translate(10%,0);
+        opacity: 0;
+    }
+
+    to {
+        transform: translate(0,0);
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes FM_text01 {
+    from {
+        -webkit-transform: translate(10%,0);
+        opacity: 0;
+    }
+
+    to {
+        -webkit-transform: translate(0,0);
+        opacity: 1;
+    }
+}
+
+.FM_text02 {
+    color: #fff;
+    text-shadow: 1px 1px 2px #000;
+    font-size: 25px;
+    font-weight: bold;
+    animation: FM_text02 1s ease 0.7s forwards;
+    -webkit-animation: FM_text02 1s ease 0.7s forwards;
+    position: absolute;
+    right: 70px;
+    top: 120px;
+    z-index: 5;
+    opacity: 0;
+}
+
+@keyframes FM_text02 {
+    from {
+        transform: translate(-10%,0);
+        opacity: 0;
+    }
+
+    to {
+        transform: translate(0,0);
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes FM_text02 {
+    from {
+        -webkit-transform: translate(-10%,0);
+        opacity: 0;
+    }
+
+    to {
+        -webkit-transform: translate(0,0);
+        opacity: 1;
+    }
+}
+
+.btn_FM_playGame, .btn_FM_playGame_off {
+    border-radius: 3px;
+    color: #fff;
+    position: absolute;
+    bottom: 0;
+    right: 17px;
+    font-size: 16px;
+    z-index: 3;
+    cursor: pointer;
+    animation: btn_FM_playGame 0.5s ease 1.2s forwards;
+    -webkit-animation: btn_FM_playGame 0.5s ease 1.2s forwards;
+    opacity: 0;
+    white-space: nowrap;
+}
+
+.btn_FM_playGame {
+    padding: 6px 9px 7px 28px;
+    background-color: #0063eb;
+}
+
+.gameTypeList.off .btn_FM_playGame {
+    display: none;
+}
+
+.btn_FM_playGame:before {
+    content: '';
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 10px;
+    margin: auto 0;
+    border-style: solid;
+    border-width: 5px 0 5px 7px;
+    border-color: transparent transparent transparent rgba(255,255,255,0.8);
+}
+
+.btn_FM_playGame:hover {
+    background-color: #007eff;
+}
+
+.btn_FM_playGame_off {
+    padding: 6px 11px 7px;
+    display: none;
+    background-color: #888;
+    cursor: not-allowed;
+    height: 18px;
+}
+
+.gameTypeList.off .btn_FM_playGame_off {
+    display: block;
+}
+
+.btn_FM_playGame_off:before {
+    content: '';
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 10px;
+    margin: auto 0;
+}
+
+.btn_FM_playGame_off img {
+    margin-right: 10px;
+    vertical-align: top;
+}
+
+@keyframes btn_FM_playGame {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes btn_FM_playGame {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/*聊愛玩色*/
+.chatroom {
+}
+
+    .chatroom:hover {
+        animation: chatroom 0.5s forwards;
+        -webkit-animation: chatroom 0.5s forwards;
+        cursor: pointer;
+    }
+
+.icon_chatroom {
+    background: url(../../Images/vi-vn/Graph/icon_indexImg.png) no-repeat -497px top;
+    width: 165px;
+    height: 165px;
+    margin: 0 auto;
+}
+
+@keyframes chatroom {
+    from {
+        width: 290px;
+    }
+
+    to {
+        width: 380px;
+    }
+}
+
+@-webkit-keyframes chatroom {
+    from {
+        width: 290px;
+    }
+
+    to {
+        width: 380px;
+    }
+}
+
+.chatroom_in {
+    position: relative;
+    height: 250px;
+}
+
+.gameTypeList.off .chatroom_in {
+    cursor: not-allowed;
+}
+
+.CR01 {
+    background: url(../../Images/vi-vn/Graph/icon_indexImg.png) no-repeat -469px -170px;
+    width: 260px;
+    height: 243px;
+    position: absolute;
+    top: 0;
+    right: 25px;
+    width: 260px;
+    animation: CR01 0.8s ease 0.3s forwards;
+    -webkit-animation: CR01 0.8s ease 0.3s forwards;
+    opacity: 0;
+}
+
+@keyframes CR01 {
+    from {
+        transform: translate(-10%,0);
+        opacity: 0;
+    }
+
+    to {
+        transform: translate(0,0);
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes CR01 {
+    from {
+        -webkit-transform: translate(-10%,0);
+        opacity: 0;
+    }
+
+    to {
+        -webkit-transform: translate(0,0);
+        opacity: 1;
+    }
+}
+
+.CR02 {
+    position: absolute;
+    top: 0;
+    left: -30px;
+    bottom: 0;
+    margin: auto 0;
+    width: 150px;
+}
+
+.love {
+    position: absolute;
+    width: 22px;
+    height: 30px;
+}
+
+    .love:before, .love:after {
+        content: '';
+        position: absolute;
+        width: 15px;
+        height: 25px;
+        border-radius: 15px 15px 0 0;
+        display: block;
+        background-color: #f00;
+    }
+
+    .love:before {
+        transform: rotate(-45deg);
+        -webkit-transform: rotate(-45deg);
+        left: 0;
+    }
+
+    .love:after {
+        transform: rotate(45deg);
+        -webkit-transform: rotate(45deg);
+        right: 0;
+        visibility: inherit;
+    }
+/*如果要做空心愛心<div class="love loveStyle01"><span class="love2"></span></div>*/
+.love2 {
+    position: absolute;
+    width: 20px;
+    height: 28px;
+    z-index: 1;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+    .love2:before, .love2:after {
+        content: '';
+        position: absolute;
+        width: 13px;
+        height: 23px;
+        border-radius: 10px 10px 0 0;
+        display: block;
+        background-color: #fff;
+    }
+
+    .love2:before {
+        transform: rotate(-45deg);
+        -webkit-transform: rotate(-45deg);
+        left: 0;
+    }
+
+    .love2:after {
+        transform: rotate(45deg);
+        -webkit-transform: rotate(45deg);
+        right: 0;
+        visibility: inherit !important;
+    }
+
+.loveStyle01 {
+    bottom: 20px;
+    left: 75px;
+    animation: loveStyle01 2.3s ease-out 1.1s infinite;
+    -webkit-animation: loveStyle01 2.3s ease-out 1.1s infinite;
+    opacity: 0;
+}
+
+@keyframes loveStyle01 {
+    0% {
+        transform: translate(80%,50%) scale(0.5);
+        opacity: 0;
+    }
+
+    20%,95%,100% {
+        transform: translate(0,0) scale(0.8);
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@-webkit-keyframes loveStyle01 {
+    0% {
+        -webkit-transform: translate(80%,50%) scale(0.5);
+        opacity: 0;
+    }
+
+    20%,95%,100% {
+        -webkit-transform: translate(0,0) scale(0.8);
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.loveStyle02 {
+    bottom: 70px;
+    left: 53px;
+    animation: loveStyle02 2.3s ease-out 1.1s infinite;
+    -webkit-animation: loveStyle02 2.3s ease-out 1.1s infinite;
+    opacity: 0;
+}
+
+    .loveStyle02:before, .loveStyle02:after {
+        background-color: #ff2e6e;
+    }
+
+@keyframes loveStyle02 {
+    0%,10% {
+        transform: translate(50%,30%) scale(0.5);
+        opacity: 0;
+    }
+
+    30%,95%,100% {
+        transform: translate(0,0);
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@-webkit-keyframes loveStyle02 {
+    0%,10% {
+        -webkit-transform: translate(50%,30%) scale(0.5);
+        opacity: 0;
+    }
+
+    30%,95%,100% {
+        -webkit-transform: translate(0,0);
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.loveStyle03 {
+    bottom: 130px;
+    left: 100px;
+    animation: loveStyle03 2.3s ease-out 1.1s infinite;
+    -webkit-animation: loveStyle03 2.3s ease-out 1.1s infinite;
+    opacity: 0;
+}
+
+    .loveStyle03:before, .loveStyle03:after {
+        background-color: #ff0061;
+    }
+
+@keyframes loveStyle03 {
+    0%,20% {
+        transform: translate(-80%,50%) scale(0.5);
+        opacity: 0;
+    }
+
+    45%,95%,100% {
+        transform: translate(0,0) scale(1.2);
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@-webkit-keyframes loveStyle03 {
+    0%,20% {
+        -webkit-transform: translate(-80%,50%) scale(0.5);
+        opacity: 0;
+    }
+
+    45%,95%,100% {
+        -webkit-transform: translate(0,0) scale(1.2);
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.loveStyle04 {
+    bottom: 158px;
+    left: 70px;
+    animation: loveStyle04 2.3s ease-out 1.1s infinite;
+    -webkit-animation: loveStyle04 2.3s ease-out 1.1s infinite;
+    opacity: 0;
+}
+
+@keyframes loveStyle04 {
+    0%,30% {
+        transform: translate(30%,50%) scale(0.5);
+        opacity: 0;
+    }
+
+    50%,95%,100% {
+        transform: translate(0,0) scale(0.7);
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@-webkit-keyframes loveStyle04 {
+    0%,30% {
+        -webkit-transform: translate(30%,50%) scale(0.5);
+        opacity: 0;
+    }
+
+    50%,95%,100% {
+        -webkit-transform: translate(0,0) scale(0.7);
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.loveStyle05 {
+    top: 15px;
+    left: 40px;
+    animation: loveStyle05 2.3s ease-out 1.1s infinite;
+    -webkit-animation: loveStyle05 2.3s ease-out 1.1s infinite;
+    opacity: 0;
+}
+
+    .loveStyle05:before, .loveStyle05:after {
+        background-color: #ff8686;
+    }
+
+@keyframes loveStyle05 {
+    0%,40% {
+        transform: translate(80%,50%) scale(0.5);
+        opacity: 0;
+    }
+
+    60%,95%,100% {
+        transform: translate(0,0) scale(1.3);
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@-webkit-keyframes loveStyle05 {
+    0%,40% {
+        -webkit-transform: translate(80%,50%) scale(0.5);
+        opacity: 0;
+    }
+
+    60%,95%,100% {
+        -webkit-transform: translate(0,0) scale(1.3);
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.CR_text01 {
+    color: #fff;
+    text-shadow: 1px 1px 2px #000, -1px -1px 3px rgba(0,0,0,0.1);
+    font-size: 40px;
+    font-weight: bold;
+    animation: FM_text01 0.9s ease 0.6s forwards;
+    -webkit-animation: FM_text01 0.9s ease 0.6s forwards;
+    position: absolute;
+    left: 80px;
+    top: 142px;
+    z-index: 5;
+    opacity: 0;
+}
+
+@keyframes CR_text01 {
+    from {
+        transform: translate(10%,0);
+        opacity: 0;
+    }
+
+    to {
+        transform: translate(0,0);
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes CR_text01 {
+    from {
+        -webkit-transform: translate(10%,0);
+        opacity: 0;
+    }
+
+    to {
+        -webkit-transform: translate(0,0);
+        opacity: 1;
+    }
+}
+
+.CR_text02 {
+    color: #fff;
+    text-shadow: 1px 1px 2px #000,-1px -1px 3px rgba(0,0,0,0.1);
+    font-size: 35px;
+    font-weight: bold;
+    animation: FM_text02 0.9s ease 0.6s forwards;
+    -webkit-animation: FM_text02 0.9s ease 0.6s forwards;
+    position: absolute;
+    right: 115px;
+    top: 183px;
+    z-index: 5;
+    opacity: 0;
+}
+
+@keyframes CR_text02 {
+    from {
+        transform: translate(-10%,0);
+        opacity: 0;
+    }
+
+    to {
+        transform: translate(0,0);
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes CR_text02 {
+    from {
+        -webkit-transform: translate(-10%,0);
+        opacity: 0;
+    }
+
+    to {
+        -webkit-transform: translate(0,0);
+        opacity: 1;
+    }
+}
+
+.CR_text01 span {
+    font-size: 42px;
+    color: #ff7abd;
+}
+
+.CR_text02 span {
+    font-size: 45px;
+    color: #ff437d;
+}
+
+.btn_CR_playGame, .btn_CR_playGame_off {
+    border-radius: 3px;
+    color: #fff;
+    position: absolute;
+    bottom: 15px;
+    right: 10px;
+    font-size: 16px;
+    z-index: 1;
+    cursor: pointer;
+    animation: btn_CR_playGame 0.5s ease 1s forwards;
+    -webkit-animation: btn_CR_playGame 0.5s ease 1s forwards;
+    opacity: 0;
+    white-space: nowrap;
+}
+
+.btn_CR_playGame {
+    background-color: #ff2e6e;
+    padding: 6px 9px 7px 28px;
+}
+
+.gameTypeList.off .btn_CR_playGame {
+    display: none;
+}
+
+.btn_CR_playGame:before {
+    content: '';
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 10px;
+    margin: auto 0;
+    border-style: solid;
+    border-width: 5px 0 5px 7px;
+    border-color: transparent transparent transparent rgba(255,255,255,0.8);
+}
+
+.btn_CR_playGame:hover {
+    background-color: #ff6796;
+}
+
+.btn_CR_playGame_off {
+    padding: 6px 11px 7px;
+    display: none;
+    background-color: #888;
+    cursor: not-allowed;
+    height: 18px;
+}
+
+.gameTypeList.off .btn_CR_playGame_off {
+    display: block;
+}
+
+.btn_CR_playGame_off:before {
+    content: '';
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 10px;
+    margin: auto 0;
+}
+
+.btn_CR_playGame_off img {
+    margin-right: 10px;
+    vertical-align: top;
+}
+
+@keyframes btn_CR_playGame {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes btn_CR_playGame {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/*活动花絮*/
+.outtake {
+}
+
+    .outtake:hover {
+        animation: outtake 0.5s forwards;
+        -webkit-animation: outtake 0.5s forwards;
+        cursor: pointer;
+    }
+
+.icon_outtake {
+    background: url(../../Images/vi-vn/Graph/icon_indexImg.png) no-repeat -506px 8px;
+    width: 165px;
+    height: 165px;
+    margin: 0 auto;
+}
+
+@keyframes outtake {
+    from {
+        width: 290px;
+    }
+
+    to {
+        width: 470px;
+    }
+}
+
+@-webkit-keyframes outtake {
+    from {
+        width: 290px;
+    }
+
+    to {
+        width: 470px;
+    }
+}
+
+.outtake_in {
+    position: relative;
+    height: 250px;
+}
+
+.gameTypeList.off .outtake_in {
+    cursor: not-allowed;
+}
+
+.outtake_people {
+    background: url(../../Images/vi-vn/Graph/icon_indexImg.png) no-repeat -490px -200px;
+    width: 346px;
+    height: 180px;
+    position: absolute;
+    top: 15px;
+    left: 90px;
+    animation: outtake_people 1.1s ease 0.3s forwards;
+    -webkit-animation: outtake_people 1.1s ease 0.3s forwards;
+    opacity: 0;
+}
+
+@keyframes outtake_people {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes outtake_people {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.outtake_text {
+    color: #e4007f;
+    font-size: 23px;
+    letter-spacing: -1px;
+    font-weight: bold;
+    animation: outtake_text 0.5s ease 0.8s forwards;
+    -webkit-animation: outtake_text 1s ease 0.8s forwards;
+    position: absolute;
+    left: 95px;
+    bottom: 18px;
+    display: block;
+    z-index: 2;
+    opacity: 0;
+}
+
+@keyframes outtake_text {
+    from {
+        transform: translate(-8%,0);
+        transform-origin: 0% 100%;
+        opacity: 0;
+    }
+
+    to {
+        transform: translate(0,0);
+        transform-origin: 0% 100%;
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes outtake_text {
+    from {
+        -webkit-transform: translate(-8%,0);
+        -webkit-transform-origin: 0% 100%;
+        opacity: 0;
+    }
+
+    to {
+        -webkit-transform: translate(0,0);
+        -webkit-transform-origin: 0% 100%;
+        opacity: 1;
+    }
+}
+
+.btn_outtake, .btn_outtake_off {
+    border-radius: 3px;
+    color: #fff;
+    position: absolute;
+    bottom: 15px;
+    font-size: 16px;
+    z-index: 1;
+    cursor: pointer;
+    animation: btn_outtake 0.5s ease 1.3s forwards;
+    -webkit-animation: btn_outtake 0.5s ease 1.3s forwards;
+    opacity: 0;
+}
+
+.btn_outtake {
+    padding: 6px 9px 7px 28px;
+    background-color: #e4007f;
+    right: 40px;
+}
+
+.gameTypeList.off .btn_outtake {
+    display: none;
+}
+
+.btn_outtake:before {
+    content: '';
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 10px;
+    margin: auto 0;
+    border-style: solid;
+    border-width: 5px 0 5px 7px;
+    border-color: transparent transparent transparent rgba(255,255,255,0.8);
+}
+
+.btn_outtake:hover {
+    background-color: #f6299b;
+}
+
+.btn_outtake_off {
+    padding: 6px 11px 7px;
+    display: none;
+    background-color: #888;
+    cursor: not-allowed;
+    right: -5px;
+    height: 18px;
+}
+
+.gameTypeList.off .btn_outtake_off {
+    display: block;
+}
+
+.btn_outtake_off:before {
+    content: '';
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 10px;
+    margin: auto 0;
+}
+
+.btn_outtake_off img {
+    margin-right: 10px;
+    vertical-align: top;
+}
+
+@keyframes btn_outtake {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes btn_outtake {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
