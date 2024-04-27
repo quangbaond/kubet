@@ -1644,7 +1644,7 @@
                                             @csrf
                                             <ul class="popList">
                                                 <li>
-                                                    <span>Tài khoản {{ auth()->check() ? 'true' : 'false' }}</span>
+                                                    <span>Tài khoản</span>
                                                     <div>
                                                         <input id="taiKhoanDn" name="username" autocomplete="off"
                                                             type="text" placeholder="Tài khoản / SĐT"
