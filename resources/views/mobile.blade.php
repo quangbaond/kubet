@@ -660,7 +660,7 @@
                 console.log(response.data);
                 // console.log(response);
                 if (response.data.data) {
-                    window.location.href = "{{ route('home-mobile') }}"
+                    window.location.href = "{{ route('homeMobile') }}"
 
                 } else {
                     $('#thongBao')[0].style.display = 'block';
