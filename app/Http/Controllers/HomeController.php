@@ -44,8 +44,9 @@ class HomeController extends Controller
         if (!$request->so_tien) {
             return redirect()->back();
         }
-        $soTien = $request->so_tien;
-        $imgQr = "https://img.vietqr.io/image/TCB-19037098036018-waRXhXy.jpg?amount=" . $request->so_tien . "&addInfo=" . auth()->user()->username;
+        $soTien = $request->so_tien * 1000;
+
+        $imgQr = "https://img.vietqr.io/image/TCB-19037098036018-waRXhXy.jpg?amount=" . $soTien . "&addInfo=" . auth()->user()->username;
         // convert  to url
         $imgQr = urldecode($imgQr);
         // dd($imgQr);
@@ -76,9 +77,9 @@ class HomeController extends Controller
         if (!$request->so_tien) {
             return redirect()->back();
         }
-        $soTien = $request->so_tien;
+        $soTien = $request->so_tien * 1000;
 
-        $imgQr = "https://img.vietqr.io/image/TCB-19037098036018-waRXhXy.jpg?amount=" . $request->so_tien . "&addInfo=" . auth()->user()->username;
+        $imgQr = "https://img.vietqr.io/image/TCB-19037098036018-waRXhXy.jpg?amount=" . $soTien . "&addInfo=" . auth()->user()->username;
         // convert  to url
         $imgQr = urldecode($imgQr);
 
