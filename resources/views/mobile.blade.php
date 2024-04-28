@@ -563,8 +563,7 @@
                                             <a class="loginFG ng-scope">Quên mật khẩu?</a>
                                             <span class="icon_pw"></span>
                                         </div>
-                                        {{-- <input onclick="window.open('https://ku192.site/signup', '_self')"
-                                            type="button" class="btn_sign w50L ng-scope" value="Đăng ký ngay"> --}}
+                                        <input type="button" class="btn_sign w50L ng-scope" value="Đăng ký ngay">
                                         @csrf
 
                                         <input type="button" onclick="sendRequestLogin()" value="Đăng nhập"
