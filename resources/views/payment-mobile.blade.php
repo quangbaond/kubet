@@ -47,7 +47,8 @@
                 </div>
                 <div>
                     <form method="post" name="form" form-validation-setting="false" as-name="ctrl"
-                        class="ng-pristine ng-valid" novalidate="novalidate" action="{{ route('createQrMobile') }}">
+                        class="ng-pristine ng-valid" novalidate="novalidate"
+                        action="{{ route('selectBankMobilePost') }}">
                         @csrf
                         <div class="form">
                             <ul>

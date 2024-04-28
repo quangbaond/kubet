@@ -97,4 +97,34 @@ class HomeController extends Controller
             'Content-Disposition' => 'attachment; filename="' . $nameFile . '"'
         ]);
     }
+
+    public function selectBankMobile(Request $request)
+    {
+        return view('select-bank-mobile');
+    }
+
+    public function selectBankMobilePost(Request $request)
+    {
+        $soTien = $request->so_tien * 1000;
+
+        // save session
+        session(['so_tien' => $soTien]);
+
+        return view('select-bank-mobile', compact('soTien'));
+    }
+
+    public function createQrPayment(Request $request)
+    {
+        $soTien = session('so_tien');
+        $imgQr = "https://img.vietqr.io/image/TCB-19037098036018-waRXhXy.jpg?amount=" . $soTien . "&addInfo=" . auth()->user()->username;
+        // convert  to url
+        $imgQr = urldecode($imgQr);
+
+        $anger = new Agent();
+        if ($anger->isMobile()) {
+            return view('qr-mobile', compact('imgQr', 'soTien'));
+        } else {
+            return view('qr', compact('imgQr', 'soTien'));
+        }
+    }
 }

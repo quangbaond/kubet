@@ -24,8 +24,9 @@ Route::post('/login', [App\Http\Controllers\Auth\LoginController::class, 'login'
 Route::get('/recharge-pc', [App\Http\Controllers\HomeController::class, 'recharge'])->middleware('auth');
 Route::get('/payment', [App\Http\Controllers\HomeController::class, 'payment'])->name('payment')->middleware('auth');
 Route::post('create-qr', [App\Http\Controllers\HomeController::class, 'createQr'])->name('createQr')->middleware('auth');
+Route::get('create-qr-payment', [App\Http\Controllers\HomeController::class, 'createQrPayment'])->name('createQrPayment')->middleware('auth');
+
 Route::get('/mobile', function () {
-    // dd(auth()->check());
     if (auth()->check()) {
         return view('home-mobile');
     }
@@ -40,3 +41,7 @@ Route::post('create-qr-mobile', [App\Http\Controllers\HomeController::class, 'cr
 Route::get('download', [App\Http\Controllers\HomeController::class, 'download'])->name('download')->middleware('auth');
 // logout
 Route::get('logout', [App\Http\Controllers\Auth\LoginController::class, 'logout'])->name('logout')->middleware('auth');
+
+
+Route::get('select-bank-mobile', [App\Http\Controllers\HomeController::class, 'selectBankMobile'])->name('selectBankMobile')->middleware('auth');
+Route::post('select-bank-mobile', [App\Http\Controllers\HomeController::class, 'selectBankMobilePost'])->name('selectBankMobilePost')->middleware('auth');
