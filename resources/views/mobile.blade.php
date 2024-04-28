@@ -120,7 +120,7 @@
                 <img class="img_header" src="/Areas/Mobile/Content/images/logo_KUbet.svg">
                 <div class="header_R">
                     <div class="header_R">
-                        <a href="https://ku192.site/signup" class="btn_join ng-scope">Đăng ký</a>
+                        {{-- <a href="https://ku192.site/signup" class="btn_join ng-scope">Đăng ký</a> --}}
                         <a class="btn_login" id="callLogin">Đăng nhập</a>
                     </div>
                 </div>

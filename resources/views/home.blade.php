@@ -45,7 +45,7 @@
             </div>
             @if (!auth()->check())
                 <div style="display: flex" class="loginArea">
-                    <a class="btn_addMember fancybox" onclick="showRegister(1)" id="RegisterImmediate">Đăng ký 1212</a>
+                    {{-- <a class="btn_addMember fancybox" onclick="showRegister(1)" id="RegisterImmediate">Đăng ký</a> --}}
                     <a class="btn_login fancybox" onclick="showLogin(1)" id="loginbutton">Đăng nhập</a>
                 </div>
             @else
